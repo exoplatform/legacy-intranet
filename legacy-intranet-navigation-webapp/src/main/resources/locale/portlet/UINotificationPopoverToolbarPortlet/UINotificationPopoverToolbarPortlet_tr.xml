@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+<UINotificationPopoverToolbarPortlet>
+<label>
+<MarkAllAsRead>Tümünü okundu olarak işaretle</MarkAllAsRead>
+<NoNotifications>Bildirim yok</NoNotifications>
+<InlineImage>Satır içi resim</InlineImage>
+<ViewAll>Tümünü Göster</ViewAll>
+<Loading>Yükleniyor</Loading>
+</label>
+</UINotificationPopoverToolbarPortlet>
+</bundle>

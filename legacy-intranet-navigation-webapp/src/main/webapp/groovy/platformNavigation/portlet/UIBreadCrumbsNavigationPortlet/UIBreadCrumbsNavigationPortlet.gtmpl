@@ -1,0 +1,19 @@
+<%
+    List<String> breadcumbs = uicomponent.getBreadcumbs();
+%>
+<div class="uiBreadcumbsNavigationPortlet clearfix" id="$uicomponent.id">
+<% if (!breadcumbs.isEmpty()) {%>
+  <div class="uiBreadcumbsNavigations">
+        <div class="navItemSelected">
+<%= _ctx.appRes("UISetupPlatformToolBarPortlet.label.administration")  %>
+<%
+    for (String node : breadcumbs) {
+%>
+        <span class="breadcumbEntry">$node</span>
+<%
+    }
+%>
+        </div>
+  </div>
+<%}%>
+</div>

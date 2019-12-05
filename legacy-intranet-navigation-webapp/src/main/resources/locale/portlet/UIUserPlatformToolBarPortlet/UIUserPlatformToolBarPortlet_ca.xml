@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+<UIUserPlatformToolBarPortlet>
+<label>
+<NotificationSettingsPortlet>Les Meves Notificacions</NotificationSettingsPortlet>
+<activities>Les Meves Activitats</activities>
+<profile>El Meu Perfil</profile>
+<network>Les Meves Connexions</network>
+<wiki>El Meu Wiki</wiki>
+<wallet>My Wallet</wallet>
+<achievements>My Achievements</achievements>
+<account>Compte</account>
+<language>Canvia d'idioma</language>
+<logout>Tanca la sessió</logout>
+</label>
+</UIUserPlatformToolBarPortlet>
+</bundle>

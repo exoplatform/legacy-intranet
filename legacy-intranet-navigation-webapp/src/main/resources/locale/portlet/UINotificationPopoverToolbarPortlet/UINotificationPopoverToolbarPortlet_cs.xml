@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+<UINotificationPopoverToolbarPortlet>
+<label>
+<MarkAllAsRead>Označit vše jako přečtené</MarkAllAsRead>
+<NoNotifications>Žádná upozornění</NoNotifications>
+<InlineImage>Vkládaný obrázek</InlineImage>
+<ViewAll>Zobrazit vše</ViewAll>
+<Loading>Nahrávání</Loading>
+</label>
+</UINotificationPopoverToolbarPortlet>
+</bundle>

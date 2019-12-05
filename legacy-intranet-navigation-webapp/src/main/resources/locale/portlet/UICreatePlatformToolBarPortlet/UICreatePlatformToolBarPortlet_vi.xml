@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+   <UIUserPlatformToolBarCreatePortlet>
+      <label>
+         <topic>Discussion</topic>
+         <poll>Thăm dò ý kiến</poll>
+         <event>Sự kiện</event>
+         <upload>File</upload>
+         <wiki>Wiki Page</wiki>
+
+      </label>
+   </UIUserPlatformToolBarCreatePortlet>
+   <UICreateList>
+      <label>
+         <topic>discussion</topic>
+         <poll>Poll</poll>
+         <CreateANew>New {1}:</CreateANew>
+         <NoForum>Sorry, no forum is available yet in which you can create the {1}. Start by creating a space first and then try again.</NoForum>
+         <RequireSelectForum>Vui lòng chọn một diễn đàn.</RequireSelectForum>
+      </label>
+      <action>
+         <Next>#{word.next}</Next>
+         <Cancel>#{word.cancel}</Cancel>
+      </action>
+   </UICreateList>
+   <UICreateTopic>
+      <label>
+         <SelectAForum>Chọn một Diễn đàn</SelectAForum>
+         <location>Ở Vị trí</location>
+         <forumId>Và Diễn đàn</forumId>
+         <FilterForums>Lọc Diễn đàn</FilterForums>
+      </label>
+   </UICreateTopic>
+   <UICreatePoll>
+      <label>
+         <SelectAForum>Chọn Diễn đàn</SelectAForum>
+         <location>Ở Vị trí</location>
+         <forumId>Và Diễn đàn</forumId>
+         <FilterForums>Lọc Diễn đàn</FilterForums>
+      </label>
+   </UICreatePoll>
+   <UICreateWiki>
+      <label>
+         <title>New Wiki Page:</title>
+         <location>Location</location>
+      </label>
+   </UICreateWiki>
+   <UICreateEvent>
+      <label>
+         <Popup_title>Create a new Event</Popup_title>
+         <Title>#{word.title}</Title>
+         <Choix>Thêm Mới:</Choix>
+         <EndEvent>Đến</EndEvent>
+         <StartEvent>Từ</StartEvent>
+         <Calendar>Calendar</Calendar>
+         <all-day>Cả Ngày</all-day>
+         <defaultCalendarId>Mặc định</defaultCalendarId>
+      </label>
+      <msg>
+         <summary-field-required>Cần nhập trường "Tiều đề".</summary-field-required>
+         <fromDate-format>Định dạng Ngày bắt đầu không đúng.</fromDate-format>
+         <toDate-format>Định dạng Ngày kết thúc không đúng.</toDate-format>
+         <logic-required>Rất tiếc bạn không thể tạo ra một sự kiện Ngày kết thúc trước Ngày bắt đầu.</logic-required>
+         <cant-add-event-on-remote-calendar>Bạn không thể thêm sự kiện vào lịch từ xa</cant-add-event-on-remote-calendar>
+         <add-successfully>
+            <Event>Sự kiện này đã được thêm vào {1}</Event>
+            <Task>Nhiệm vụ này đã được thêm vào {1}</Task>
+         </add-successfully>
+         <add-unsuccessfully>{0} đã không được thêm vào.</add-unsuccessfully>
+      </msg>
+      <action>
+         <Next>#{word.save}</Next>
+         <Cancel>#{word.cancel}</Cancel>
+      </action>
+   </UICreateEvent>
+    <UIUploadFile>
+        <Select>Chọn Tệp</Select>
+        <action>
+          <close>#{word.close}</close>
+        </action>
+    </UIUploadFile>
+   <Choix>
+      <label>
+         <Event>Sự kiện</Event>
+         <Task>Nhiệm vụ</Task>
+      </label>
+   </Choix>
+</bundle>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+<UIUserPlatformToolBarPortlet>
+<label>
+<NotificationSettingsPortlet>Moja obvestila</NotificationSettingsPortlet>
+<activities>Moje dejavnosti</activities>
+<profile>Moj profil</profile>
+<network>Moje povezave</network>
+<wiki>Moj Wiki</wiki>
+<wallet>My Wallet</wallet>
+<achievements>Moji dosežki</achievements>
+<account>Račun</account>
+<language>Spremeni jezik</language>
+<logout>Odjava</logout>
+</label>
+</UIUserPlatformToolBarPortlet>
+</bundle>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+<UINotificationPopoverToolbarPortlet>
+<label>
+<MarkAllAsRead>Markeer alle berichten als gelezen</MarkAllAsRead>
+<NoNotifications>Geen meldingen</NoNotifications>
+<InlineImage>Inline-afbeelding</InlineImage>
+<ViewAll>Alles Bekijken</ViewAll>
+<Loading>Bezig met laden</Loading>
+</label>
+</UINotificationPopoverToolbarPortlet>
+</bundle>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+<UIUserPlatformToolBarPortlet>
+<label>
+<NotificationSettingsPortlet>Minhas Notificações</NotificationSettingsPortlet>
+<activities>Minhas Atividades</activities>
+<profile>Meu perfil</profile>
+<network>Minhas conexões</network>
+<wiki>Meu Wiki</wiki>
+<wallet>Minha Carteira</wallet>
+<achievements>My Achievements</achievements>
+<account>Conta</account>
+<language>Mudar Idioma</language>
+<logout>Sair</logout>
+</label>
+</UIUserPlatformToolBarPortlet>
+</bundle>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+   <UIUserPlatformToolBarCreatePortlet>
+      <label>
+         <topic>Temat</topic>
+         <poll>Ankieta</poll>
+         <event>Wydarzenie</event>
+         <upload>Prześlij plik</upload>
+         <wiki>Strona Wiki</wiki>
+
+      </label>
+   </UIUserPlatformToolBarCreatePortlet>
+   <UICreateList>
+      <label>
+         <topic>temat</topic>
+         <poll>ankieta</poll>
+         <CreateANew>Utwórz nowy {1}:</CreateANew>
+         <NoForum>Niestety, żadne forum nie jest jeszcze dostępne, aby stworzyć {1}. Zacznij od stworzenia własnej przestrzeni.</NoForum>
+         <RequireSelectForum>Wybierz forum.</RequireSelectForum>
+      </label>
+      <action>
+         <Next>#{word.next}</Next>
+         <Cancel>#{word.cancel}</Cancel>
+      </action>
+   </UICreateList>
+   <UICreateTopic>
+      <label>
+         <SelectAForum>Wybierz Forum</SelectAForum>
+         <location>Lokalizacja</location>
+         <forumId>I Forum</forumId>
+         <FilterForums>Filtr forum</FilterForums>
+      </label>
+   </UICreateTopic>
+   <UICreatePoll>
+      <label>
+         <SelectAForum>Wybierz forum</SelectAForum>
+         <location>Lokalizacja</location>
+         <forumId>I Forum</forumId>
+         <FilterForums>Filtr forum</FilterForums>
+      </label>
+   </UICreatePoll>
+   <UICreateWiki>
+      <label>
+         <title>Utwórz nową stronę Wiki:</title>
+         <location>Lokalizacja</location>
+      </label>
+   </UICreateWiki>
+   <UICreateEvent>
+      <label>
+         <Popup_title>Stwórz nowe wydarzenie</Popup_title>
+         <Title>#{word.title}</Title>
+         <Choix>Dodaj nowe:</Choix>
+         <EndEvent>Do</EndEvent>
+         <StartEvent>Od</StartEvent>
+         <Calendar>Wybierz kalendarz</Calendar>
+         <all-day>Wszystkie dni</all-day>
+         <defaultCalendarId>Domyślne</defaultCalendarId>
+      </label>
+      <msg>
+         <summary-field-required>Pole "Tytuł" jest wymagane.</summary-field-required>
+         <fromDate-format>Format daty w polu "Od" jest niepoprawny.</fromDate-format>
+         <toDate-format>Format daty w polu "Do" jest niepoprawny.</toDate-format>
+         <logic-required>Niestety, nie można stworzyć wydarzenia, które kończy się przed jego rozpoczęciem.</logic-required>
+         <cant-add-event-on-remote-calendar>Nie można dodać wydarzenia do kalendarza zdalnego</cant-add-event-on-remote-calendar>
+         <add-successfully>
+            <Event>Wydarzenie zostało dodane do {1}</Event>
+            <Task>Zadanie zostało dodane do {1}</Task>
+         </add-successfully>
+         <add-unsuccessfully>{0} nie zostało dodane.</add-unsuccessfully>
+      </msg>
+      <action>
+         <Next>#{word.save}</Next>
+         <Cancel>#{word.cancel}</Cancel>
+      </action>
+   </UICreateEvent>
+    <UIUploadFile>
+        <Select>Wybierz plik</Select>
+        <action>
+          <close>#{word.close}</close>
+        </action>
+    </UIUploadFile>
+   <Choix>
+      <label>
+         <Event>Wydarzenie</Event>
+         <Task>Zadanie</Task>
+      </label>
+   </Choix>
+</bundle>

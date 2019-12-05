@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+<UIUserPlatformToolBarPortlet>
+<label>
+<NotificationSettingsPortlet>My Notifications</NotificationSettingsPortlet>
+<activities>My Activities</activities>
+<profile>Mano profilis</profile>
+<network>Mano jungtys</network>
+<wiki>Mano Wiki</wiki>
+<wallet>My Wallet</wallet>
+<achievements>My Achievements</achievements>
+<account>Account</account>
+<language>Pakeisti kalbą</language>
+<logout>Atsijungti</logout>
+</label>
+</UIUserPlatformToolBarPortlet>
+</bundle>

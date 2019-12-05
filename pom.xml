@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>addons-parent-pom</artifactId>
+    <groupId>org.exoplatform.addons</groupId>
+    <version>12-M01</version>
+    <relativePath/>
+  </parent>
+  <groupId>org.exoplatform.addons.legacy-intranet</groupId>
+  <artifactId>legacy-intranet</artifactId>
+  <version>6.0.x-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>eXo Addons:: Legacy intranet</name>
+  <description>Parent POM for Legacy intranet addon.</description>
+  <modules>
+    <module>legacy-intranet-extension-service</module>
+    <module>legacy-intranet-webui-service</module>
+    <module>legacy-intranet-navigation-service</module>
+    <module>legacy-intranet-welcome-screens-service</module>
+    <module>legacy-intranet-upgrade-plugins</module>
+    <module>legacy-intranet-extension-webapp</module>
+    <module>legacy-intranet-extension-portlets</module>
+    <module>legacy-intranet-homepage-webapp</module>
+    <module>legacy-intranet-navigation-webapp</module>
+    <module>legacy-intranet-welcome-screens-webapp</module>
+    <module>legacy-intranet-packaging</module>
+  </modules>
+  <scm>
+    <connection>scm:git:git://github.com/exo-addons/legacy-intranet.git</connection>
+    <developerConnection>scm:git:git@github.com:exo-addons/legacy-intranet.git</developerConnection>
+    <url>https://github.com/exoplatform/legacy-intranet</url>
+    <tag>HEAD</tag>
+  </scm>
+  <properties>
+    <!-- **************************************** -->
+    <!-- Jira Settings -->
+    <!-- **************************************** -->
+    <jira.project.key>PLF</jira.project.key>
+    <!-- **************************************** -->
+    <!-- Jenkins Settings -->
+    <!-- **************************************** -->
+    <jenkins.job.name>addon-legacy-intranet-master-ci</jenkins.job.name>
+    <!-- **************************************** -->
+    <!-- Project Dependencies -->
+    <!-- **************************************** -->
+    <!-- legacy Intranet Project Dependencies -->
+    <org.exoplatform.social.version>6.0.x-SNAPSHOT</org.exoplatform.social.version>
+    <org.exoplatform.ecms.version>6.0.x-SNAPSHOT</org.exoplatform.ecms.version>
+    <org.exoplatform.forum.version>6.0.x-SNAPSHOT</org.exoplatform.forum.version>
+    <org.exoplatform.wiki.version>6.0.x-SNAPSHOT</org.exoplatform.wiki.version>
+    <org.exoplatform.calendar.version>6.0.x-SNAPSHOT</org.exoplatform.calendar.version>
+    <org.exoplatform.jcr.version>6.0.x-SNAPSHOT</org.exoplatform.jcr.version>
+  </properties>
+  <dependencyManagement>
+    <dependencies>
+      <!-- Import versions of external dependencies to use -->
+      <dependency>
+        <groupId>org.exoplatform.social</groupId>
+        <artifactId>social</artifactId>
+        <version>${org.exoplatform.social.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.exoplatform.ecms</groupId>
+        <artifactId>ecms</artifactId>
+        <version>${org.exoplatform.ecms.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.exoplatform.forum</groupId>
+        <artifactId>forum</artifactId>
+        <version>${org.exoplatform.forum.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.exoplatform.calendar</groupId>
+        <artifactId>calendar</artifactId>
+        <version>${org.exoplatform.calendar.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.exoplatform.wiki</groupId>
+        <artifactId>wiki</artifactId>
+        <version>${org.exoplatform.wiki.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!-- Current project artifacts -->
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>legacy-intranet-extension-service</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>legacy-intranet-navigation-service</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>legacy-intranet-upgrade-plugins</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>legacy-intranet-webui-service</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>legacy-intranet-welcome-screens-service</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+    
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>legacy-intranet-extension-portlets</artifactId>
+        <version>${project.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>legacy-intranet-extension-webapp</artifactId>
+        <version>${project.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>legacy-intranet-homepage-webapp</artifactId>
+        <version>${project.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>legacy-intranet-navigation-webapp</artifactId>
+        <version>${project.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>legacy-intranet-welcome-screens-webapp</artifactId>
+        <version>${project.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>legacy-intranet-packaging</artifactId>
+        <version>${project.version}</version>
+        <type>pom</type>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <configuration>
+            <!-- Don't include libraries into Web Archives -->
+            <packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+<UINotificationPopoverToolbarPortlet>
+<label>
+<MarkAllAsRead>همه را به عنوان خوانده شده علامت گذاری کن</MarkAllAsRead>
+<NoNotifications>اطلاعیه ای موجود نیست</NoNotifications>
+<InlineImage>Inline image</InlineImage>
+<ViewAll>مشاهده همه</ViewAll>
+<Loading>در حال بارگذاری</Loading>
+</label>
+</UINotificationPopoverToolbarPortlet>
+</bundle>
