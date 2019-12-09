@@ -153,6 +153,12 @@
         <version>${project.version}</version>
         <type>pom</type>
       </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>legacy-intranet-packaging</artifactId>
+        <version>${project.version}</version>
+        <type>zip</type>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <build>
