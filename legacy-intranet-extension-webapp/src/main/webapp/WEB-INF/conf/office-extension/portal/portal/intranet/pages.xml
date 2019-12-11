@@ -145,7 +145,7 @@
           <access-permissions>*:/platform/users</access-permissions>
           <portlet-application>
             <portlet>
-              <application-ref>homepage-portlets</application-ref>
+              <application-ref>social-portlet</application-ref>
               <portlet-ref>GettingStartedPortlet</portlet-ref>
             </portlet>
             <title>Getting Started</title>
@@ -194,7 +194,7 @@
 
           <portlet-application>
             <portlet>
-              <application-ref>homepage-portlets</application-ref>
+              <application-ref>social-portlet</application-ref>
               <portlet-ref>WhoIsOnLinPortlet</portlet-ref>
             </portlet>
             <title>Who is on line</title>

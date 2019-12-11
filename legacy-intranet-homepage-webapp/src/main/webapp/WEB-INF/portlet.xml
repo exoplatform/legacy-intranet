@@ -8,12 +8,17 @@
     <portlet-name>GettingStartedPortlet</portlet-name>
     <display-name xml:lang="EN">Getting Started</display-name>
     <portlet-class>org.exoplatform.platform.portlet.juzu.gettingstarted.GettingstartedPortlet</portlet-class>
+    <init-param>
+      <description>List of profiles that can be used to enable this portlet</description>
+      <name>exo.profiles</name>
+      <value>ecms</value>
+    </init-param>
     <supports>
       <mime-type>text/html</mime-type>
     </supports>
-     <supported-locale>en</supported-locale>
-     <supported-locale>fr</supported-locale>
-     <resource-bundle>locale.portlet.gettingStarted.gettingStarted</resource-bundle>
+    <supported-locale>en</supported-locale>
+    <supported-locale>fr</supported-locale>
+    <resource-bundle>locale.portlet.gettingStarted.gettingStarted</resource-bundle>
     <portlet-info>
       <title>getting Started</title>
       <short-title>getting Started</short-title>
@@ -56,6 +61,11 @@
     <portlet-name>HomePageCalendarPortlet</portlet-name>
     <display-name xml:lang="EN">Calendar Portlet</display-name>
     <portlet-class>org.exoplatform.commons.api.portlet.GenericDispatchedViewPortlet</portlet-class>
+    <init-param>
+      <description>List of profiles that can be used to enable this portlet</description>
+      <name>exo.profiles</name>
+      <value>calendar</value>
+    </init-param>
     <init-param>
       <name>portlet-view-dispatched-file-path</name>
       <value>/calendar-home-app/index.html</value>
