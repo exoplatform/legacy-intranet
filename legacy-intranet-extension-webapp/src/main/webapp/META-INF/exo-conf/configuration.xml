@@ -13,6 +13,7 @@
 			<set-method>registerChangePlugin</set-method>
 			<!-- The full qualified name of the PortalContainerDefinitionChangePlugin -->
 			<type>org.exoplatform.container.definition.PortalContainerDefinitionChangePlugin</type>
+      <priority>100</priority>
 			<init-params>
 				<value-param>
 					<name>apply.default</name>
@@ -27,10 +28,16 @@
 								<value>
 									<string>acme-intranet</string>
 								</value>
+								<value>
+									<string>homepage-portlets</string>
+								</value>
+								<value>
+									<string>platformNavigation</string>
+								</value>
+								<value>
+									<string>portlets</string>
+								</value>
 							</collection>
-						</field>
-						<field name="target">
-							<string>platform-extension</string>
 						</field>
 					</object>
 				</object-param>				

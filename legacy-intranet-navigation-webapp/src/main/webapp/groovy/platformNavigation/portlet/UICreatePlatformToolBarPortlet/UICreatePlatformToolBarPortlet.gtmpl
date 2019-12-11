@@ -29,7 +29,6 @@ import org.exoplatform.web.application.JavascriptManager;
 import org.exoplatform.platform.webui.NavigationURLUtils;
 import org.exoplatform.webui.core.UIPopupContainer;
 import org.exoplatform.platform.component.UICreateList;
-import org.exoplatform.cs.event.UICreateEvent;
 import org.exoplatform.platform.component.UICreateForm;
 
 def rcontext = _ctx.getRequestContext() ;

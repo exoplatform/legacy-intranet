@@ -3,7 +3,7 @@
                xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd http://www.exoplatform.org/xml/ns/kernel_1_2.xsd"
                xmlns="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd">
   <!-- GETTING STARTED -->
-  <component>
+  <component profiles="ecms">
     <type>org.exoplatform.platform.common.rest.services.GettingStarted.GettingStartedRestService</type>
   </component>
   <!-- SUGGESTED PEOPLE -->
@@ -11,7 +11,7 @@
     <type>org.exoplatform.platform.common.rest.services.SuggestPeoplePortlet.PeopleRestServices</type>
   </component>
   <!-- CALENDAR -->
-  <component>
+  <component profiles="calendar">
     <type>org.exoplatform.platform.common.rest.services.CalendarPortlet.CalendarPortletRestService</type>
   </component>
   <!-- SUGGEST SPACES -->
@@ -25,7 +25,7 @@
   <component>
     <type>org.exoplatform.platform.common.rest.services.FeatureToggles.FeatureTogglesRestService</type>
   </component>
-  <component>
+  <component profiles="ecms">
     <type>org.exoplatform.platform.common.rest.services.GettingStarted.DeleteGadgetService</type>
   </component>
   <component>
@@ -90,12 +90,12 @@
     <type>org.exoplatform.platform.gadget.services.ForumStatistics.ForumsIntranetServiceImp</type>
   </component>
 
-  <component>
+  <component profiles="forum">
     <key>org.exoplatform.platform.gadget.services.ForumStatistics.ForumsWeeklyStatisticService</key>
     <type>org.exoplatform.platform.gadget.services.ForumStatistics.ForumsWeeklyStatisticServiceImp</type>
   </component>
 
-  <component>
+  <component profiles="forum">
     <type>org.exoplatform.platform.gadget.services.ForumStatistics.ForumRestService</type>
   </component>
 
@@ -115,7 +115,7 @@
   </component>
 
   <!--FAVORITE DOCUMENT-->
-  <component>
+  <component profiles="ecms">
     <type>org.exoplatform.platform.gadget.services.favorite.FavoriteRESTService</type>
   </component>
 
@@ -125,7 +125,7 @@
   </component>
 
   <!--BOOKMARKS-->
-  <component>
+  <component profiles="ecms">
     <type>org.exoplatform.platform.gadget.services.Bookmark.BookmarkRestService</type>
   </component>
 
@@ -143,7 +143,7 @@
   <!-- JOBS -->
   <external-component-plugins>
     <target-component>org.exoplatform.services.scheduler.JobSchedulerService</target-component>
-    <component-plugin>
+    <component-plugin profiles="forum">
       <name>ForumsWeeklyStatisticJob</name>
       <set-method>addPeriodJob</set-method>
       <type>org.exoplatform.services.scheduler.PeriodJob</type>
@@ -168,7 +168,7 @@
   <!-- JCR NODE TYPES -->
   <external-component-plugins>
     <target-component>org.exoplatform.services.jcr.RepositoryService</target-component>
-    <component-plugin>
+    <component-plugin profiles="forum">
       <name>add.gadget.services.nodeType</name>
       <set-method>addPlugin</set-method>
       <type>org.exoplatform.services.jcr.impl.AddNodeTypePlugin</type>
@@ -178,68 +178,6 @@
           <description>Node types configuration file</description>
           <value>jar:/conf/portal/jcr/forumStatistics-nodetypes.xml</value>
         </values-param>
-      </init-params>
-    </component-plugin>
-  </external-component-plugins>
-
-  <external-component-plugins>
-    <target-component>org.exoplatform.commons.chromattic.ChromatticManager</target-component>
-    <component-plugin>
-      <name>chromattic</name>
-      <set-method>addLifeCycle</set-method>
-      <type>org.exoplatform.commons.chromattic.ChromatticLifeCycle</type>
-      <init-params>
-        <value-param>
-          <name>domain-name</name>
-          <value>softwareRegistration</value>
-        </value-param>
-        <value-param>
-          <name>workspace-name</name>
-          <value>collaboration</value>
-        </value-param>
-        <values-param>
-          <name>entities</name>
-          <value>org.chromattic.ext.ntdef.NTFile</value>
-          <value>org.chromattic.ext.ntdef.NTFolder</value>
-          <value>org.chromattic.ext.ntdef.NTResource</value>
-        </values-param>
-        <properties-param>
-          <name>options</name>
-          <property name="org.chromattic.api.Option.root_node.path" value="/exo:applications"/>
-          <property name="org.chromattic.api.Option.root_node.create" value="true"/>
-        </properties-param>
-      </init-params>
-    </component-plugin>
-  </external-component-plugins>
-
-  <external-component-plugins>
-    <target-component>org.exoplatform.commons.upgrade.UpgradeProductService</target-component>
-    <component-plugin>
-      <name>LoginHistoryUpgradePlugin</name>
-      <set-method>addUpgradePlugin</set-method>
-      <type>org.exoplatform.platform.gadget.services.LoginHistory.LoginHistoryUpgradePlugin</type>
-      <description>Upgrade plugin for login history data storage from jcr to jpa</description>
-      <init-params>
-        <value-param>
-          <name>product.group.id</name>
-          <description>The groupId of the product</description>
-          <value>org.exoplatform.platform</value>
-        </value-param>
-        <value-param>
-          <name>plugin.execution.order</name>
-          <description>The plugin execution order</description>
-          <value>1</value>
-        </value-param>
-        <value-param>
-          <name>plugin.upgrade.target.version</name>
-          <description>Target version of the plugin</description>
-          <value>5.2.0</value>
-        </value-param>
-        <value-param>
-          <name>plugin.upgrade.async.execution</name>
-          <description>Execute the upgrade plugin asynchronously</description>
-          <value>true</value>
-        </value-param>
       </init-params>
     </component-plugin>
   </external-component-plugins>
@@ -257,36 +195,6 @@
           <description>Change logs of Login History</description>
           <value>db/changelog/loginhistory.db.changelog-1.0.0.xml</value>
         </values-param>
-      </init-params>
-    </component-plugin>
-  </external-component-plugins>
-
-  <external-component-plugins>
-    <target-component>org.exoplatform.commons.chromattic.ChromatticManager</target-component>
-    <component-plugin>
-      <name>chromattic</name>
-      <set-method>addLifeCycle</set-method>
-      <type>org.exoplatform.commons.chromattic.ChromatticLifeCycle</type>
-      <init-params>
-        <value-param>
-          <name>domain-name</name>
-          <value>softwareRegistration</value>
-        </value-param>
-        <value-param>
-          <name>workspace-name</name>
-          <value>collaboration</value>
-        </value-param>
-        <values-param>
-          <name>entities</name>
-          <value>org.chromattic.ext.ntdef.NTFile</value>
-          <value>org.chromattic.ext.ntdef.NTFolder</value>
-          <value>org.chromattic.ext.ntdef.NTResource</value>
-        </values-param>
-        <properties-param>
-          <name>options</name>
-          <property name="org.chromattic.api.Option.root_node.path" value="/exo:applications"/>
-          <property name="org.chromattic.api.Option.root_node.create" value="true"/>
-        </properties-param>
       </init-params>
     </component-plugin>
   </external-component-plugins>
