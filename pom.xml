@@ -17,13 +17,11 @@
     <module>legacy-intranet-extension-service</module>
     <module>legacy-intranet-webui-service</module>
     <module>legacy-intranet-navigation-service</module>
-    <module>legacy-intranet-welcome-screens-service</module>
     <module>legacy-intranet-upgrade-plugins</module>
     <module>legacy-intranet-extension-webapp</module>
     <module>legacy-intranet-extension-portlets</module>
     <module>legacy-intranet-homepage-webapp</module>
     <module>legacy-intranet-navigation-webapp</module>
-    <module>legacy-intranet-welcome-screens-webapp</module>
     <module>legacy-intranet-packaging</module>
   </modules>
   <scm>
@@ -111,11 +109,6 @@
         <artifactId>legacy-intranet-webui-service</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>legacy-intranet-welcome-screens-service</artifactId>
-        <version>${project.version}</version>
-      </dependency>
     
       <dependency>
         <groupId>${project.groupId}</groupId>
@@ -138,12 +131,6 @@
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>legacy-intranet-navigation-webapp</artifactId>
-        <version>${project.version}</version>
-        <type>war</type>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>legacy-intranet-welcome-screens-webapp</artifactId>
         <version>${project.version}</version>
         <type>war</type>
       </dependency>

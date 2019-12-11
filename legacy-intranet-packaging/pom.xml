@@ -34,12 +34,6 @@
       <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>legacy-intranet-welcome-screens-service</artifactId>
-      <version>${project.version}</version>
-      <scope>provided</scope>
-    </dependency>
   
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -65,13 +59,6 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>legacy-intranet-navigation-webapp</artifactId>
-      <version>${project.version}</version>
-      <type>war</type>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>legacy-intranet-welcome-screens-webapp</artifactId>
       <version>${project.version}</version>
       <type>war</type>
       <scope>provided</scope>
