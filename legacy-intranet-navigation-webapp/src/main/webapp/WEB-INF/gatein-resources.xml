@@ -187,7 +187,7 @@
       <adapter>
         (function($) {
         var _$ = window.jQuery; window.jQuery = $;
-        <include>/javascript/eXo/platform/responsive/toe.min.js</include>
+        <include>/javascript/eXo/platform/toe.min.js</include>
         window.jQuery = _$;
         })($);
       </adapter>
