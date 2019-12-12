@@ -56,7 +56,7 @@
           <portlet-application>
             <portlet>
               <application-ref>social-portlet</application-ref>
-              <portlet-ref>WhoIsOnLinPortlet</portlet-ref>
+              <portlet-ref>WhoIsOnLinePortlet</portlet-ref>
             </portlet>
             <show-info-bar>false</show-info-bar>
           </portlet-application>
