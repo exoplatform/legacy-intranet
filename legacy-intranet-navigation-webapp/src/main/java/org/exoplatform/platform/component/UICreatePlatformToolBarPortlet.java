@@ -68,8 +68,7 @@ public class UICreatePlatformToolBarPortlet extends UIPortletApplication {
     }
 
     public boolean isSocialProfileActivated() {
-        return (ExoContainer.getProfiles().contains("social") || ExoContainer.getProfiles().contains("default") || ExoContainer
-                .getProfiles().contains("all"));
+        return ExoContainer.getCurrentProfiles().contains("social");
     }
 
     public static UserPortal getUserPortal() {
