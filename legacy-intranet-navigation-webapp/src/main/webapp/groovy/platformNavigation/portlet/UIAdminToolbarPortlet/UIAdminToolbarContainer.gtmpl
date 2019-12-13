@@ -1,10 +1,9 @@
 <%	
 	import org.exoplatform.web.application.JavascriptManager;
 	import org.exoplatform.portal.webui.util.Util;
-	import org.exoplatform.wcm.webui.Utils;
+	import org.exoplatform.platform.component.Utils;
 	import org.exoplatform.portal.application.PortalRequestContext ;
 	import org.exoplatform.platform.webui.NavigationURLUtils;
-	import org.exoplatform.wcm.webui.seo.UISEOToolbarForm;
 
 	def rcontext = _ctx.getRequestContext();
 	 
@@ -13,18 +12,12 @@
 	String editPageLabel = _ctx.appRes("UIAdminToolbarPortlet.action.Layout");
 	String editSiteLayout = _ctx.appRes("UIAdminToolbarPortlet.action.siteLayout");
 	String editNavigation = _ctx.appRes("UIAdminToolbarPortlet.action.EditNavigation");
-	String quickEditLabel = _ctx.appRes("UIAdminToolbarPortlet.action.Content");
 	String editorLabel = _ctx.appRes("UIAdminToolbarPortlet.action.Editor");
 	String seoLabel = _ctx.appRes("UIAdminToolbarPortlet.action.Properties");
   String siteLabel = _ctx.appRes("UIAdminToolbarPortlet.action.Site");
 	String addSiteLabel = _ctx.appRes("UIAdminToolbarPortlet.action.AddSite");
 
-	String quiEditClass = "quickEditUnchecked";
 	PortalRequestContext context = Util.getPortalRequestContext();
-	Boolean quickEdit = (Boolean)context.getRequest().getSession().getAttribute(Utils.TURN_ON_QUICK_EDIT);
-	if(quickEdit != null && quickEdit) {
-	  quiEditClass = "quickEditChecked"
-	}
 
 	boolean userCouldEditNavigation = uicomponent.hasEditPermissionOnNavigation() && !uicomponent.isUserNavigation();
 	boolean userCouldEditPage = uicomponent.hasEditPermissionOnPage();
@@ -38,7 +31,14 @@
 	</a>
 	
 		<ul class="dropdown-menu">
-      <% if(uicomponent.isSpaceManager()) { %>
+      <% if(uicomponent.isECMSEnabled() && uicomponent.isSpaceManager()) {
+        String quickEditLabel = _ctx.appRes("UIAdminToolbarPortlet.action.Content");
+        String quiEditClass = "quickEditUnchecked";
+        Boolean quickEdit = (Boolean)context.getRequest().getSession().getAttribute(Utils.TURN_ON_QUICK_EDIT);
+        if(quickEdit != null && quickEdit) {
+          quiEditClass = "quickEditChecked"
+        }
+      %>
 			<li>
 				<a href="javascript:void(0);" onclick="<%=uicomponent.event("ChangeEditing")%>">
 					$quickEditLabel
@@ -61,11 +61,13 @@
 							$editPageLabel
 						</a>
 					</li>
-					<li>
-						<div class="seoImgBlock">
-							<%uicomponent.renderChild(UISEOToolbarForm.class);%>
-						</div>						
-					</li>	  				
+          <% if(uicomponent.isECMSEnabled()) { %>
+  					<li>
+  						<div class="seoImgBlock">
+  							<%uicomponent.renderChild(uicomponent.SEO_TOOLBAR_FORM_POPUP_CONTAINER_ID);%>
+  						</div>
+  					</li>
+          <% } %>
 					<li class="divider">&nbsp;</li>
 					<li>	
 						<a href="javascript:void(0);" onclick="ajaxGet(eXo.env.server.createPortalURL('UIWorkingWorkspace', 'PageCreationWizard', true))">

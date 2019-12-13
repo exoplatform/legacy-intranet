@@ -19,15 +19,13 @@
 
 package org.exoplatform.platform.component;
 
+import java.util.List;
+
+import org.exoplatform.container.ExoContainer;
 import org.exoplatform.platform.webui.NavigationURLUtils;
-import org.exoplatform.platform.webui.navigation.TreeNode;
-import org.exoplatform.platform.webui.navigation.UINavigationManagement;
-import org.exoplatform.platform.webui.navigation.UINavigationNodeSelector;
-import org.exoplatform.platform.webui.navigation.UIPageNodeForm;
+import org.exoplatform.platform.webui.navigation.*;
 import org.exoplatform.portal.application.PortalRequestContext;
-import org.exoplatform.portal.config.UserACL;
-import org.exoplatform.portal.config.UserPortalConfig;
-import org.exoplatform.portal.config.UserPortalConfigService;
+import org.exoplatform.portal.config.*;
 import org.exoplatform.portal.config.model.PortalConfig;
 import org.exoplatform.portal.mop.SiteKey;
 import org.exoplatform.portal.mop.SiteType;
@@ -38,24 +36,15 @@ import org.exoplatform.portal.webui.util.Util;
 import org.exoplatform.portal.webui.workspace.UIPortalApplication;
 import org.exoplatform.social.core.space.model.Space;
 import org.exoplatform.social.core.space.spi.SpaceService;
-import org.exoplatform.wcm.webui.Utils;
-import org.exoplatform.wcm.webui.seo.UISEOToolbarForm;
 import org.exoplatform.web.application.ApplicationMessage;
 import org.exoplatform.webui.application.WebuiApplication;
 import org.exoplatform.webui.application.WebuiRequestContext;
-import org.exoplatform.webui.config.annotation.ComponentConfig;
-import org.exoplatform.webui.config.annotation.ComponentConfigs;
-import org.exoplatform.webui.config.annotation.EventConfig;
-import org.exoplatform.webui.core.UIApplication;
-import org.exoplatform.webui.core.UIComponent;
-import org.exoplatform.webui.core.UIPopupContainer;
-import org.exoplatform.webui.core.UIPortletApplication;
+import org.exoplatform.webui.config.annotation.*;
+import org.exoplatform.webui.core.*;
 import org.exoplatform.webui.core.lifecycle.UIFormLifecycle;
 import org.exoplatform.webui.event.Event;
 import org.exoplatform.webui.event.Event.Phase;
 import org.exoplatform.webui.event.EventListener;
-
-import java.util.List;
 
 //import org.exoplatform.webos.webui.page.UIDesktopPage;
 
@@ -74,13 +63,18 @@ import java.util.List;
         @EventConfig(listeners = UIPageNodeForm.CreatePageActionListener.class, phase = Phase.DECODE) }) })
 public class UIAdminToolbarContainer extends UIPortletApplication {
 
-  private static final String SEO_TOOLBAR_FORM_POPUP_CONTAINER_ID = "UISEOToolbarFormPopupContainer";
-  private static final String EDIT_NAVIGATION_POPUP_CONTAINER_ID = "UIPopupWindow-UIEditNavigationPopupContainer";
-  private static final String PAGE_MANAGEMENT_URI = "administration/pageManagement";
-  private String pageManagementLink = null;
-  private SpaceService spaceService = null;
+  private static final String      SEO_TOOLBAR_FORM_POPUP_CONTAINER_ID = "UISEOToolbarFormPopupContainer";
 
-  private String userId = null;
+  private static final String      EDIT_NAVIGATION_POPUP_CONTAINER_ID  = "UIPopupWindow-UIEditNavigationPopupContainer";
+
+  private static final String      PAGE_MANAGEMENT_URI                 = "administration/pageManagement";
+
+  private String                   pageManagementLink                  = null;
+
+  private SpaceService             spaceService                        = null;
+
+  private String                   userId                              = null;
+
   protected UINavigationManagement naviManager;
 
   public UIAdminToolbarContainer() throws Exception {
@@ -89,8 +83,10 @@ public class UIAdminToolbarContainer extends UIPortletApplication {
     if (quickEdit == null) {
       context.getRequest().getSession().setAttribute(Utils.TURN_ON_QUICK_EDIT, false);
     }
-    addChild(UIPopupContainer.class, null, SEO_TOOLBAR_FORM_POPUP_CONTAINER_ID);
-    addChild(UISEOToolbarForm.class, null, null);
+    if (isECMSEnabled()) {
+      addChild(UIPopupContainer.class, null, SEO_TOOLBAR_FORM_POPUP_CONTAINER_ID);
+      ECMSExtension.addSEO(this);
+    }
     spaceService = getApplicationComponent(SpaceService.class);
   }
 
@@ -168,7 +164,7 @@ public class UIAdminToolbarContainer extends UIPortletApplication {
   public void renderChildren() throws Exception {
     List<UIComponent> list = getChildren();
     for (UIComponent child : list) {
-      if (!(child instanceof UISEOToolbarForm) && child.isRendered()) {
+      if ((!isECMSEnabled() || !ECMSExtension.isSEO(child)) && child.isRendered()) {
         renderChild(child);
       }
     }
@@ -188,21 +184,14 @@ public class UIAdminToolbarContainer extends UIPortletApplication {
   }
 
   private boolean canAcceedMenu() throws Exception {
-    UIPortalApplication portalApp = Util.getUIPortalApplication();
-    UIPage uiPage = portalApp.findFirstComponentOfType(UIPage.class);
-//    boolean canAccessMenu = (!(uiPage instanceof UIDesktopPage))
-//        && (hasEditPermissionOnNavigation() || hasEditPermissionOnPage() || hasEditPermissionOnPortal());
-    boolean canAccessMenu = (hasEditPermissionOnNavigation() || hasEditPermissionOnPage() || hasEditPermissionOnPortal());
-    
-    return canAccessMenu;
+    return hasEditPermissionOnNavigation() || hasEditPermissionOnPage() || hasEditPermissionOnPortal();
   }
 
   public static class ChangeEditingActionListener extends EventListener<UIAdminToolbarContainer> {
 
     /*
      * (non-Javadoc)
-     * @see
-     * org.exoplatform.webui.event.EventListener#execute(org.exoplatform
+     * @see org.exoplatform.webui.event.EventListener#execute(org.exoplatform
      * .webui.event.Event)
      */
     public void execute(Event<UIAdminToolbarContainer> event) throws Exception {
@@ -210,10 +199,8 @@ public class UIAdminToolbarContainer extends UIPortletApplication {
       Boolean quickEdit = (Boolean) context.getRequest().getSession().getAttribute(Utils.TURN_ON_QUICK_EDIT);
       if (quickEdit == null || !quickEdit) {
         context.getRequest().getSession().setAttribute(Utils.TURN_ON_QUICK_EDIT, true);
-        //Utils.updatePortal((PortletRequestContext) event.getRequestContext());         
       } else {
         context.getRequest().getSession().setAttribute(Utils.TURN_ON_QUICK_EDIT, false);
-        //Utils.updatePortal((PortletRequestContext) event.getRequestContext());
       }
       event.getRequestContext().getJavascriptManager().getRequireJS().addScripts("location.reload(true);");
     }
@@ -233,11 +220,12 @@ public class UIAdminToolbarContainer extends UIPortletApplication {
       }
 
       UserACL userACL = uicomp.getApplicationComponent(UserACL.class);
-      if (edittedNavigation.getKey().getType().equals(SiteType.PORTAL)) {
+      if (SiteType.PORTAL.equals(edittedNavigation.getKey().getType())) {
         String portalName = Util.getPortalRequestContext().getPortalOwner();
         UserPortalConfigService configService = uicomp.getApplicationComponent(UserPortalConfigService.class);
-        UserPortalConfig userPortalConfig = configService.getUserPortalConfig(portalName, context.getRemoteUser(),
-            PortalRequestContext.USER_PORTAL_CONTEXT);
+        UserPortalConfig userPortalConfig = configService.getUserPortalConfig(portalName,
+                                                                              context.getRemoteUser(),
+                                                                              PortalRequestContext.USER_PORTAL_CONTEXT);
         if (userPortalConfig == null) {
           uiApplication.addMessage(new ApplicationMessage("UISiteManagement.msg.portal-not-exist", new String[] { portalName }));
           return;
@@ -246,7 +234,7 @@ public class UIAdminToolbarContainer extends UIPortletApplication {
           uiApplication.addMessage(new ApplicationMessage("UISiteManagement.msg.Invalid-editPermission", null));
           return;
         }
-      } else if (edittedNavigation.getKey().getType().equals(PortalConfig.GROUP_TYPE)) {
+      } else if (PortalConfig.GROUP_TYPE.equals(edittedNavigation.getKey().getType())) {
         if (!userACL.hasEditPermissionOnNavigation(SiteKey.group(edittedNavigation.getKey().getTypeName()))) {
           uiApplication.addMessage(new ApplicationMessage("UISiteManagement.msg.Invalid-editPermission", null));
           return;
@@ -256,7 +244,7 @@ public class UIAdminToolbarContainer extends UIPortletApplication {
       if (uicomp.naviManager == null) {
         uicomp.naviManager = uicomp.createUIComponent(UINavigationManagement.class, null, null);
       }
-      Utils.createPopupWindow(uicomp, uicomp.naviManager, EDIT_NAVIGATION_POPUP_CONTAINER_ID, 400, -1, -1);
+      Utils.createPopupWindow(uicomp, uicomp.naviManager, EDIT_NAVIGATION_POPUP_CONTAINER_ID, 400);
 
       uicomp.naviManager.setSiteKey(edittedNavigation.getKey());
       UserPortal userPortal = getUserPortal();
@@ -280,7 +268,7 @@ public class UIAdminToolbarContainer extends UIPortletApplication {
       selector.selectNode(selectedParent);
 
       WebuiRequestContext context = event.getRequestContext();
-      Utils.createPopupWindow(uicomp, uicomp.naviManager, EDIT_NAVIGATION_POPUP_CONTAINER_ID, 400, -1, -1);
+      Utils.createPopupWindow(uicomp, uicomp.naviManager, EDIT_NAVIGATION_POPUP_CONTAINER_ID, 400);
       context.addUIComponentToUpdateByAjax(uicomp);
 
       TreeNode pageNode = uiPageNodeForm.getPageNode();
@@ -290,6 +278,10 @@ public class UIAdminToolbarContainer extends UIPortletApplication {
       selector.createEvent("NodeModified", Phase.PROCESS, context).broadcast();
     }
 
+  }
+
+  private boolean isECMSEnabled() {
+    return ExoContainer.getCurrentProfiles().contains("ecms");
   }
 
 }

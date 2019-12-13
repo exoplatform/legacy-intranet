@@ -1,10 +1,10 @@
 package org.exoplatform.platform.component;
 
-import org.exoplatform.forum.create.*;
+import java.util.*;
+
 import org.exoplatform.forum.create.UICreateForm;
 import org.exoplatform.services.log.ExoLogger;
 import org.exoplatform.services.log.Log;
-import org.exoplatform.wcm.webui.Utils;
 import org.exoplatform.webui.application.WebuiRequestContext;
 import org.exoplatform.webui.config.annotation.ComponentConfig;
 import org.exoplatform.webui.config.annotation.EventConfig;
@@ -14,11 +14,6 @@ import org.exoplatform.webui.event.Event;
 import org.exoplatform.webui.event.EventListener;
 import org.exoplatform.webui.ext.UIExtension;
 import org.exoplatform.webui.ext.UIExtensionManager;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.MissingResourceException;
 
 /**
  * @author <a href="rtouzi@exoplatform.com">rtouzi</a>
