@@ -26,12 +26,19 @@
    xmlns="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd">
 
 	<import>war:/conf/office-extension/portal/resource-bundle-configuration.xml</import>
+
 	<import>war:/conf/office-extension/portal/legacy-portal-configuration.xml</import>
+	<import profiles="wiki">war:/conf/office-extension/portal/addons/wiki/portal-configuration.xml</import>
+  <import profiles="calendar">war:/conf/office-extension/portal/addons/calendar/portal-configuration.xml</import>
+	<import profiles="ecms">war:/conf/office-extension/portal/addons/ecms/portal-configuration.xml</import>
+	<import profiles="forum">war:/conf/office-extension/portal/addons/forum/portal-configuration.xml</import>
+
 	<import>war:/conf/office-extension/portal/application-registry-configuration.xml</import>
   <import>war:/conf/office-extension/portal/quickadd-plugin-configuration.xml</import>
   <import>war:/conf/office-extension/portal/module-configuration.xml</import>
 	<import>war:/conf/office-extension/social/spaces-configuration.xml</import>
 	<import>war:/conf/office-extension/social/profiles-configuration.xml</import>
+
   <import profiles="ecms">war:/conf/office-extension/wcm/system-configuration.xml</import>
   <import profiles="ecms">war:/conf/office-extension/wcm/application-templates-configuration.xml</import>
 	<import profiles="ecms">war:/conf/office-extension/wcm/deployment/office-deployment-configuration.xml</import>
