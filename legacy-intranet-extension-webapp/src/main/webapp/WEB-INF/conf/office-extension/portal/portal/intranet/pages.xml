@@ -145,7 +145,7 @@
           <access-permissions>*:/platform/users</access-permissions>
           <portlet-application>
             <portlet>
-              <application-ref>social-portlet</application-ref>
+              <application-ref>homepage-portlets</application-ref>
               <portlet-ref>GettingStartedPortlet</portlet-ref>
             </portlet>
             <title>Getting Started</title>
