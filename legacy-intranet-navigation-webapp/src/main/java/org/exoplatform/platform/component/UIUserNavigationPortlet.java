@@ -205,10 +205,14 @@ public class UIUserNavigationPortlet extends UIPortletApplication {
     public Map<String, String> getUserNodes() throws Exception {
         if(userNodes == null) {
             userNodes = new LinkedHashMap<>();
-            userNodes.put(PROFILE_URI, getProfileLink());
-            userNodes.put(ACTIVITIES_URI, getactivitesURL());
-            userNodes.put(CONNEXIONS_URI, getrelationURL());
-            userNodes.put(WIKI_URI, getWikiURL());
+            if (CommonsUtils.hasProfile("social")) {
+              userNodes.put(PROFILE_URI, getProfileLink());
+              userNodes.put(ACTIVITIES_URI, getactivitesURL());
+              userNodes.put(CONNEXIONS_URI, getrelationURL());
+            }
+            if (CommonsUtils.hasProfile("wiki")) {
+              userNodes.put(WIKI_URI, getWikiURL());
+            }
             if (CommonsUtils.isFeatureActive(WALLET_FEATURE_NAME, Utils.getViewerRemoteId())) {
               userNodes.put(WALLET_URI, getWalletURL());
             }

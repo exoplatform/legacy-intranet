@@ -72,10 +72,10 @@
             <img src="<%=uicomponent.getAvatarURL()%>" alt="avatar"/> $fullName
         </a>
         <ul class="dropdown-menu">
-            <% if (uicomponent.isSocialPortal()) { %>			
-			<li class="clearfix action_top mobile-visible"></li>
-			<li class="clearfix avatar-help-action mobile-visible"></li>
-			<li class="divider top mobile-visible">&nbsp;</li>
+          <% if (uicomponent.isSocialPortal()) { %>
+            <li class="clearfix action_top mobile-visible"></li>
+            <li class="clearfix avatar-help-action mobile-visible"></li>
+            <li class="divider top mobile-visible">&nbsp;</li>
             <li>
               <a href="$profileLink"><i class="uiIconPLFProfile"></i>$labelProfile</a>
             </li>
@@ -85,45 +85,46 @@
            	<li>
               <a href="$connectionLink"><i class="uiIconPLFMyConnection"></i>$labelnetwork</a>
             </li>
+          <% } %>
+          <% if (uicomponent.hasSystemProfile("wiki")) { %>
             <li>
               <a href="$wikiLink"><i class="uiIconWikiMyWiki"></i>$labelWiki</a>
             </li>
-	            <% if (CommonsUtils.isFeatureActive("notification")) {  %>
-		            <li>
-		              <a href="$notificationsLink"><i class="uiIconPLFNotifications"></i>$labelNotifications</a>
-		            </li>
-	            <% } %>
-            <% } %>
-            <% if (CommonsUtils.isFeatureActive("wallet", remoteUser)) {
-              def walletLink = NavigationURLUtils.getURLInCurrentPortal("wallet");
-              def labelWallet = _ctx.appRes("UIUserPlatformToolBarPortlet.label.wallet");
-            %>
-              <li>
-                <a href="$walletLink"><i class="uiIconWalletMyWallet"></i>$labelWallet</a>
-              </li>
-            <% } %>
-
-
-            <% if (CommonsUtils.isFeatureActive("gamification", remoteUser)) {
-            def gamificationLink = NavigationURLUtils.getURLInCurrentPortal("achievements");
-            def labelGamification = _ctx.appRes("UIUserPlatformToolBarPortlet.label.achievements");
-            %>
+          <% } %>
+          <% if (CommonsUtils.isFeatureActive("notification")) {  %>
             <li>
-                <a href="$gamificationLink"><i class="uiIconAppGamification"></i>$labelGamification</a>
+              <a href="$notificationsLink"><i class="uiIconPLFNotifications"></i>$labelNotifications</a>
             </li>
-            <% } %>
+          <% } %>
+          <% if (CommonsUtils.isFeatureActive("wallet", remoteUser)) {
+            def walletLink = NavigationURLUtils.getURLInCurrentPortal("wallet");
+            def labelWallet = _ctx.appRes("UIUserPlatformToolBarPortlet.label.wallet");
+          %>
+            <li>
+              <a href="$walletLink"><i class="uiIconWalletMyWallet"></i>$labelWallet</a>
+            </li>
+          <% } %>
 
-            <li class="divider">&nbsp;</li>
-            <li>
-              <a href="javascript:void(0);" onclick="$accountSetting"><i class="uiIconSetting"></i>$labelaccount</a>
-            </li>
-            <li>
-              <a href="javascript:void(0);" onclick="$changeLanguageAction"><i class="uiIconFlags"></i>$labellanguage</a>
-            </li>
-            <li class="divider">&nbsp;</li>
-            <li onclick="eXo.portal.logout();">
-                <a href="javascript:void(0);"><i class="uiIconPLFLogout"></i>$labellogout</a>
-            </li>
+          <% if (CommonsUtils.isFeatureActive("gamification", remoteUser)) {
+          def gamificationLink = NavigationURLUtils.getURLInCurrentPortal("achievements");
+          def labelGamification = _ctx.appRes("UIUserPlatformToolBarPortlet.label.achievements");
+          %>
+          <li>
+              <a href="$gamificationLink"><i class="uiIconAppGamification"></i>$labelGamification</a>
+          </li>
+          <% } %>
+
+          <li class="divider">&nbsp;</li>
+          <li>
+            <a href="javascript:void(0);" onclick="$accountSetting"><i class="uiIconSetting"></i>$labelaccount</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" onclick="$changeLanguageAction"><i class="uiIconFlags"></i>$labellanguage</a>
+          </li>
+          <li class="divider">&nbsp;</li>
+          <li onclick="eXo.portal.logout();">
+              <a href="javascript:void(0);"><i class="uiIconPLFLogout"></i>$labellogout</a>
+          </li>
         </ul>
    
 </div>
