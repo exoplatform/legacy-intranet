@@ -83,8 +83,8 @@ public class UIAdminToolbarContainer extends UIPortletApplication {
     if (quickEdit == null) {
       context.getRequest().getSession().setAttribute(Utils.TURN_ON_QUICK_EDIT, false);
     }
+    addChild(UIPopupContainer.class, null, SEO_TOOLBAR_FORM_POPUP_CONTAINER_ID);
     if (isECMSEnabled()) {
-      addChild(UIPopupContainer.class, null, SEO_TOOLBAR_FORM_POPUP_CONTAINER_ID);
       ECMSExtension.addSEO(this);
     }
     spaceService = getApplicationComponent(SpaceService.class);
