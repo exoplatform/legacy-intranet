@@ -19,19 +19,17 @@
 -->
 <node-navigation
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_objects_1_2 http://www.gatein.org/xml/ns/gatein_objects_1_2"
-        xmlns="http://www.gatein.org/xml/ns/gatein_objects_1_2">
+        xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_objects_1_6 http://www.gatein.org/xml/ns/gatein_objects_1_6"
+        xmlns="http://www.gatein.org/xml/ns/gatein_objects_1_6">
   <priority>3</priority>
   <page-nodes>
     <node>
-      <uri>documents</uri>
       <name>documents</name>
       <label>#{portal.intranet.documents}</label>
       <page-reference>portal::intranet::documents</page-reference>
     </node>
 
     <node>
-      <uri>searchResult</uri>
       <name>searchResult</name>
       <label>#{portal.intranet.searchResult}</label>
       <visibility>HIDDEN</visibility>
@@ -39,7 +37,6 @@
     </node>
 
     <node>
-      <uri>detail</uri>
       <name>detail</name>
       <label>#{portal.intranet.detail}</label>
       <visibility>SYSTEM</visibility>
@@ -47,7 +44,6 @@
     </node>
 
     <node>
-      <uri>printviewer</uri>
       <name>printviewer</name>
       <label>#{portal.intranet.printviewer}</label>
       <visibility>SYSTEM</visibility>

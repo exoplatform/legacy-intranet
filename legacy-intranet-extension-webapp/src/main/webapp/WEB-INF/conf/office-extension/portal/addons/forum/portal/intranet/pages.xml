@@ -19,22 +19,23 @@
 -->
 <page-set
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_objects_1_2 http://www.gatein.org/xml/ns/gatein_objects_1_2"
-        xmlns="http://www.gatein.org/xml/ns/gatein_objects_1_2">
+        xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_objects_1_6 http://www.gatein.org/xml/ns/gatein_objects_1_6"
+        xmlns="http://www.gatein.org/xml/ns/gatein_objects_1_6">
   <page>
-    <name>calendar</name>
-    <title>Calendar</title>
+    <name>forum</name>
+    <title>Forum</title>
     <access-permissions>*:/platform/users</access-permissions>
     <edit-permission>*:/platform/administrators</edit-permission>
-
     <portlet-application>
       <portlet>
-        <application-ref>calendar</application-ref>
-        <portlet-ref>CalendarPortlet</portlet-ref>
+        <application-ref>forum</application-ref>
+        <portlet-ref>ForumPortlet</portlet-ref>
       </portlet>
-      <title>Calendar Portlet</title>
-      <access-permissions>*:/platform/users</access-permissions>
+      <title>Forum Portlet</title>
+      <access-permissions>Everyone</access-permissions>
       <show-info-bar>false</show-info-bar>
+      <show-application-state>false</show-application-state>
+      <show-application-mode>false</show-application-mode>
     </portlet-application>
   </page>
 </page-set>
