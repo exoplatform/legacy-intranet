@@ -14,11 +14,14 @@ import org.exoplatform.portal.webui.util.NavigationUtils;
 import org.exoplatform.portal.webui.util.Util;
 import org.exoplatform.portal.webui.workspace.UIPortalApplication;
 import org.exoplatform.portal.webui.workspace.UIWorkingWorkspace;
+import org.exoplatform.services.log.ExoLogger;
+import org.exoplatform.services.log.Log;
 import org.exoplatform.web.application.RequestContext;
 import org.exoplatform.webui.application.WebuiRequestContext;
 import org.exoplatform.webui.core.*;
 
 public class Utils {
+  private static Log LOG = ExoLogger.getLogger(Utils.class);
 
   /** The Quick edit attribute for HTTPSession */
   public static final String TURN_ON_QUICK_EDIT = "turnOnQuickEdit";
@@ -86,40 +89,45 @@ public class Utils {
   }
 
   public static boolean hasEditPermissionOnPortal() throws Exception {
-    UIPortalApplication portalApp = Util.getUIPortalApplication();
-    UIPortal currentUIPortal = portalApp.<UIWorkingWorkspace> findComponentById(UIPortalApplication.UI_WORKING_WS_ID)
-                                        .findFirstComponentOfType(UIPortal.class);
-    UserACL userACL = portalApp.getApplicationComponent(UserACL.class);
+    UIPortal currentUIPortal = Util.getUIPortal();
+    UserACL userACL = currentUIPortal.getApplicationComponent(UserACL.class);
     return userACL.hasEditPermissionOnPortal(currentUIPortal.getSiteKey().getTypeName(),
                                              currentUIPortal.getSiteKey().getName(),
                                              currentUIPortal.getEditPermission());
   }
 
   public static boolean hasEditPermissionOnPage() throws Exception {
-    UIPortalApplication portalApp = Util.getUIPortalApplication();
-    UIWorkingWorkspace uiWorkingWS = portalApp.getChildById(UIPortalApplication.UI_WORKING_WS_ID);
-    UIPageBody pageBody = uiWorkingWS.findFirstComponentOfType(UIPageBody.class);
-    UIPage uiPage = (UIPage) pageBody.getUIComponent();
-    UserACL userACL = portalApp.getApplicationComponent(UserACL.class);
-
-    if (uiPage != null) {
-      return userACL.hasEditPermissionOnPage(uiPage.getOwnerType(),
-                                             uiPage.getOwnerId(),
-                                             uiPage.getEditPermission());
-    }
-    UIPortal currentUIPortal = portalApp.<UIWorkingWorkspace> findComponentById(UIPortalApplication.UI_WORKING_WS_ID)
-                                        .findFirstComponentOfType(UIPortal.class);
-    UserNode currentNode = currentUIPortal.getSelectedUserNode();
-    PageKey pageReference = currentNode.getPageRef();
-    if (pageReference == null) {
+    try {
+      UIPortalApplication portalApp = Util.getUIPortalApplication();
+      UIWorkingWorkspace uiWorkingWS = portalApp.getChildById(UIPortalApplication.UI_WORKING_WS_ID);
+      UIPageBody pageBody = uiWorkingWS.findFirstComponentOfType(UIPageBody.class);
+      if (pageBody == null) {
+        return false;
+      }
+      UIPage uiPage = (UIPage) pageBody.getUIComponent();
+      UserACL userACL = portalApp.getApplicationComponent(UserACL.class);
+      if (uiPage != null) {
+        return userACL.hasEditPermissionOnPage(uiPage.getOwnerType(),
+                                               uiPage.getOwnerId(),
+                                               uiPage.getEditPermission());
+      }
+      UIPortal currentUIPortal = portalApp.<UIWorkingWorkspace> findComponentById(UIPortalApplication.UI_WORKING_WS_ID)
+                                          .findFirstComponentOfType(UIPortal.class);
+      UserNode currentNode = currentUIPortal.getSelectedUserNode();
+      PageKey pageReference = currentNode.getPageRef();
+      if (pageReference == null) {
+        return false;
+      }
+      UserPortalConfigService portalConfigService = portalApp.getApplicationComponent(UserPortalConfigService.class);
+      PageContext page = portalConfigService.getPage(pageReference);
+      if (page == null) {
+        return false;
+      }
+      return userACL.hasEditPermission(page);
+    } catch (Exception e) {
+      LOG.warn("Error while retrieving permission of used on current page", e);
       return false;
     }
-    UserPortalConfigService portalConfigService = portalApp.getApplicationComponent(UserPortalConfigService.class);
-    PageContext page = portalConfigService.getPage(pageReference);
-    if (page == null) {
-      return false;
-    }
-    return userACL.hasEditPermission(page);
   }
 
 }
