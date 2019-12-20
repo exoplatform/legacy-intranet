@@ -24,7 +24,7 @@
     import org.exoplatform.portal.mop.user.UserNavigation;
     import org.exoplatform.portal.mop.user.UserNode;
     import org.exoplatform.web.application.JavascriptManager;
-    import org.exoplatform.platform.webui.NavigationURLUtils;
+    import org.exoplatform.portal.webui.util.NavigationURLUtils;
     import org.exoplatform.web.url.PortalURL;
     import org.exoplatform.portal.mop.SiteType;
     import org.exoplatform.web.url.navigation.NavigationResource;

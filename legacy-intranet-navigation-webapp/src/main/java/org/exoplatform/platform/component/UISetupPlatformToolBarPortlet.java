@@ -1,8 +1,11 @@
 package org.exoplatform.platform.component;
 
+import java.util.*;
+
+import org.gatein.common.text.EntityEncoder;
+
 import org.exoplatform.commons.utils.ExpressionUtil;
 import org.exoplatform.platform.common.service.MenuConfiguratorService;
-import org.exoplatform.platform.webui.NavigationURLUtils;
 import org.exoplatform.portal.config.UserPortalConfig;
 import org.exoplatform.portal.config.UserPortalConfigService;
 import org.exoplatform.portal.config.model.PageNode;
@@ -10,10 +13,8 @@ import org.exoplatform.portal.mop.SiteKey;
 import org.exoplatform.portal.mop.navigation.Scope;
 import org.exoplatform.portal.mop.page.PageContext;
 import org.exoplatform.portal.mop.page.PageKey;
-import org.exoplatform.portal.mop.user.UserNavigation;
-import org.exoplatform.portal.mop.user.UserNode;
-import org.exoplatform.portal.mop.user.UserNodeFilterConfig;
-import org.exoplatform.portal.mop.user.UserPortal;
+import org.exoplatform.portal.mop.user.*;
+import org.exoplatform.portal.webui.util.NavigationURLUtils;
 import org.exoplatform.portal.webui.util.Util;
 import org.exoplatform.services.log.ExoLogger;
 import org.exoplatform.services.log.Log;
@@ -22,16 +23,6 @@ import org.exoplatform.webui.application.portlet.PortletRequestContext;
 import org.exoplatform.webui.config.annotation.ComponentConfig;
 import org.exoplatform.webui.core.UIPortletApplication;
 import org.exoplatform.webui.core.lifecycle.UIApplicationLifecycle;
-import org.gatein.common.text.EntityEncoder;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.ResourceBundle;
 
 @ComponentConfig(lifecycle = UIApplicationLifecycle.class, template = "app:/groovy/platformNavigation/portlet/UISetupPlatformToolBarPortlet/UISetupPlatformToolBarPortlet.gtmpl")
 public class UISetupPlatformToolBarPortlet extends UIPortletApplication {

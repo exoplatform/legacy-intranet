@@ -20,7 +20,7 @@
 
 %>
 <%
-  import org.exoplatform.platform.webui.NavigationURLUtils;
+  import org.exoplatform.portal.webui.util.NavigationURLUtils;
   import org.exoplatform.social.core.service.LinkProvider;
   import java.util.Collection;
   import org.exoplatform.web.application.JavascriptManager;

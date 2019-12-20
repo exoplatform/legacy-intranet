@@ -25,7 +25,7 @@
     import org.exoplatform.portal.mop.Visibility;
     import org.exoplatform.webui.organization.OrganizationUtils;
     import org.gatein.common.text.EntityEncoder;
-    import org.exoplatform.platform.webui.NavigationURLUtils;
+    import org.exoplatform.portal.webui.util.NavigationURLUtils;
     import org.exoplatform.web.application.JavascriptManager;
 
     JavascriptManager jsManager = Util.getPortalRequestContext().getJavascriptManager();

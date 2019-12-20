@@ -16,14 +16,15 @@
  */
 package org.exoplatform.platform.component;
 
+import java.util.Collection;
+import java.util.Collections;
+
 import org.exoplatform.container.ExoContainer;
-import org.exoplatform.platform.webui.NavigationURLUtils;
 import org.exoplatform.portal.config.UserPortalConfig;
 import org.exoplatform.portal.mop.SiteKey;
 import org.exoplatform.portal.mop.navigation.Scope;
-import org.exoplatform.portal.mop.user.UserNavigation;
-import org.exoplatform.portal.mop.user.UserNode;
-import org.exoplatform.portal.mop.user.UserPortal;
+import org.exoplatform.portal.mop.user.*;
+import org.exoplatform.portal.webui.util.NavigationURLUtils;
 import org.exoplatform.portal.webui.util.Util;
 import org.exoplatform.services.log.ExoLogger;
 import org.exoplatform.services.log.Log;
@@ -36,9 +37,6 @@ import org.exoplatform.social.webui.Utils;
 import org.exoplatform.webui.config.annotation.ComponentConfig;
 import org.exoplatform.webui.core.UIPortletApplication;
 import org.exoplatform.webui.core.lifecycle.UIApplicationLifecycle;
-
-import java.util.Collection;
-import java.util.Collections;
 
 /**
  * Portlet manages profile.<br>
