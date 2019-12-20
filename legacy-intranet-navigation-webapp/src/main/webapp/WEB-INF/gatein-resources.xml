@@ -16,40 +16,26 @@
 <gatein-resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                   xsi:schemaLocation="http://www.exoplatform.org/xml/ns/gatein_resources_1_4 http://www.exoplatform.org/xml/ns/gatein_resources_1_4"
                   xmlns="http://www.exoplatform.org/xml/ns/gatein_resources_1_4">
-    <portlet>
-        <name>UISetupPlatformToolBarPortlet</name>
-        <module>
-            <depends>
-                <module>bts_dropdown</module>
-            </depends>
-        </module>
-    </portlet>
-    <portlet>
-        <name>UIUserInfoPortlet</name>
-        <module>
-            <depends>
-                <module>base</module>
-            </depends>
-            <depends>
-                <module>bts_dropdown</module>
-            </depends>
-            <!--
-            <depends>
-                <module>socialcomposer</module>
-            </depends>
-            -->
-            <depends>
-                <module>social-core</module>
-            </depends>
-			<depends>
-                <module>jquery-touch</module>
-            </depends> 
-			<depends>
-                <module>platform-responsive</module>
-            </depends>
-        </module>
-    </portlet>
-
+  <portlet>
+    <name>UIUserInfoPortlet</name>
+    <module>
+      <depends>
+        <module>base</module>
+      </depends>
+      <depends>
+        <module>bts_dropdown</module>
+      </depends>
+      <depends>
+        <module>social-core</module>
+      </depends>
+      <depends>
+        <module>jquery-touch</module>
+      </depends>
+      <depends>
+        <module>platform-responsive</module>
+      </depends>
+    </module>
+  </portlet>
 	<portlet>
     <name>UICreatePlatformToolBarPortlet</name>
     <module>
@@ -64,45 +50,11 @@
       </depends>
     </module>
   </portlet>
-  <!--Begin-->
-  <portlet>
-    <name>UIHelpPlatformToolBarPortlet</name>
-    <module>
-      <depends>
-        <module>base</module>
-      </depends>
-
-      <depends>
-        <module>social-core</module>
-      </depends>
-    </module>
-  </portlet>
-  <!--END-->
-  <portlet>
-    <name>UIUserNavigationPortlet</name>
-    <module>
-      <depends>
-        <module>webui-ext</module>
-      </depends>
-    </module>
-  </portlet>
   <portlet>
     <name>UICompanyNavigationPortlet</name>
     <module>
       <depends>
         <module>navigation</module>
-      </depends>
-    </module>
-  </portlet>
-  <portlet>
-    <name>UISearchPlatformToolbarPortlet</name>
-    <module>
-      <script>
-        <path>/javascript/eXo/platform/search/Search.js</path>
-      </script>
-      <depends>
-        <module>jquery</module>
-        <as>$</as>
       </depends>
     </module>
   </portlet>
@@ -144,16 +96,6 @@
       </depends>
     </module>
   </portlet>
-
-  <module>
-    <name>socialcomposer</name>
-    <!-- <script> <name>eXo.social.webui.UINavigationComposer</name> <path>/javascript/eXo/social/webui/UINavigationComposer.js</path>
-      </script> -->
-    <depends>
-      <module>social-core</module>
-    </depends>
-  </module>
-
   <module>
     <name>platform-left-navigation</name>
     <as>platformLeftNavigation</as>
@@ -171,7 +113,6 @@
       <module>jq_perfect_scrollbar</module>
     </depends>
   </module>
-
   <module>
     <name>jquery-touch</name>
     <as>jqueryTouch</as>
@@ -188,24 +129,9 @@
       <module>jquery</module>
     </depends>
   </module>
-
-  <module>
-    <name>navigation-spaces-search</name>
-    <as>navigationSpacesSearch</as>
-    <load-group>plf_navigation</load-group>
-    <script>
-      <path>/javascript/eXo/platform/navigation/UISpaceNavigationPortlet/UISpaceNavigation.js</path>
-    </script>
-    <depends>
-      <module>jquery</module>
-      <as>$</as>
-    </depends>
-  </module>
-
   <module>
     <name>navigation-toolbar</name>
     <as>navigationToolbar</as>
-    <load-group>plf_navigation</load-group>
     <script>
       <path>/javascript/eXo/platform/navigation/ToolBarNavigation/UIToolBarNavigation.js</path>
     </script>
@@ -220,30 +146,6 @@
     </depends>
     <depends>
       <module>jquery</module>
-    </depends>
-  </module>
-
-  <module>
-    <name>ui-user-navigation</name>
-    <as>uiusernav</as>
-    <script>
-      <path>/javascript/eXo/platform/navigation/UIUserNavigationPortlet/UIUserNavigation.js</path>
-    </script>
-    <depends>
-      <module>base</module>
-    </depends>
-    <depends>
-      <module>jquery</module>
-      <as>jq</as>
-    </depends>
-    <depends>
-      <module>bts_dropdown</module>
-    </depends>
-    <depends>
-      <module>bts_popover</module>
-    </depends>
-    <depends>
-      <module>bannerUploader</module>
     </depends>
   </module>
 </gatein-resources>

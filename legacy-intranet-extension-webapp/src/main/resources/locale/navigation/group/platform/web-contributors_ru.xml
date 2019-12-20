@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<bundle>
-  <administration>
-    <siteExplorer>Обозреватель контента</siteExplorer>
-    <wcmAdmin>Управление контентом</wcmAdmin>
-  </administration>
-</bundle>

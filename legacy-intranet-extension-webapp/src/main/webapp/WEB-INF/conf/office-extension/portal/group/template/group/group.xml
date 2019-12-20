@@ -63,7 +63,7 @@
                     <access-permissions>*:/platform/users</access-permissions>
                     <portlet-application>
                         <portlet>
-                            <application-ref>platformNavigation</application-ref>
+                            <application-ref>social-portlet</application-ref>
                             <portlet-ref>UISpaceNavigationPortlet</portlet-ref>
                         </portlet>
                         <access-permissions>*:/platform/users</access-permissions>

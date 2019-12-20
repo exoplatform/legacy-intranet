@@ -37,7 +37,7 @@
         <container id="UIHelpPlatformToolbarPortlet" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
           <portlet-application>
             <portlet>
-              <application-ref>platformNavigation</application-ref>
+              <application-ref>commons-extension</application-ref>
               <portlet-ref>UIHelpPlatformToolbarPortlet</portlet-ref>
               <!--PLF-308 -->
             </portlet>
@@ -90,7 +90,7 @@
         <container id="UISetupPlatformToolBarPortletID" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
           <portlet-application>
             <portlet>
-              <application-ref>platformNavigation</application-ref>
+              <application-ref>commons-extension</application-ref>
               <portlet-ref>UISetupPlatformToolBarPortlet</portlet-ref>
               <!--PLF-308 -->
             </portlet>

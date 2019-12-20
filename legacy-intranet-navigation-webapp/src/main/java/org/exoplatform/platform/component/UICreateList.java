@@ -53,20 +53,28 @@ public class UICreateList extends UIContainer {
     return list;
   }
 
-
-    public static void remove(UICreateList uiform) {
-        List<UIComponent> uilist = uiform.getChildren();
-        List<String> lisID = new ArrayList<String>();
-        if (uilist.size() != 0) {
-            for (UIComponent uIComponent : uilist) {
-                lisID.add(uIComponent.getId());
-            }
-            for (String id : lisID) {
-                uiform.removeChildById(id);
-
-            }
-        }
+  @Override
+  public void processRender(WebuiRequestContext context) throws Exception {
+    // If no extension, avoid displaying application
+    if (this.extensions == null || this.extensions.isEmpty()) {
+      return;
     }
+    super.processRender(context);
+  }
+
+  public static void remove(UICreateList uiform) {
+      List<UIComponent> uilist = uiform.getChildren();
+      List<String> lisID = new ArrayList<String>();
+      if (uilist.size() != 0) {
+          for (UIComponent uIComponent : uilist) {
+              lisID.add(uIComponent.getId());
+          }
+          for (String id : lisID) {
+              uiform.removeChildById(id);
+
+          }
+      }
+  }
 
   public static class QuickAddActionListener extends EventListener<UICreateList> {
     @Override

@@ -53,28 +53,6 @@
     </portlet>
 
     <portlet>
-        <description xml:lang="EN">Setup Menu Portlet</description>
-        <portlet-name>UISetupPlatformToolBarPortlet</portlet-name>
-        <display-name xml:lang="EN">UISetupPlatformToolBarPortlet</display-name>
-        <portlet-class>org.exoplatform.webui.application.portlet.PortletApplicationController</portlet-class>
-        <init-param>
-            <name>webui.configuration</name>
-            <!-- must match the path to configuration file -->
-            <value>/WEB-INF/conf/portlet/UISetupPlatformToolBarPortlet/configuration.xml</value>
-        </init-param>
-        <expiration-cache>0</expiration-cache>
-        <supports>
-            <mime-type>text/html</mime-type>
-            <portlet-mode>help</portlet-mode>
-        </supports>
-        <supported-locale>en</supported-locale>
-        <portlet-info>
-            <title>UISetupPlatformToolBarPortlet</title>
-            <short-title>UISetupPlatformToolBarPortlet</short-title>
-        </portlet-info>
-    </portlet>
-
-    <portlet>
         <description xml:lang="EN">Create Menu Portlet</description>
         <portlet-name>UICreatePlatformToolBarPortlet</portlet-name>
         <display-name xml:lang="EN">UICreatePlatformToolBarPortlet</display-name>
@@ -98,76 +76,7 @@
             <short-title>UICreatePlatformToolBarPortlet</short-title>
         </portlet-info>
     </portlet>
-    <!-- help BEGIN-->
-    <portlet>
-        <description xml:lang="EN">Help Portlet</description>
-        <portlet-name>UIHelpPlatformToolbarPortlet</portlet-name>
-        <display-name xml:lang="EN">UIHelpPlatformToolbarPortlet</display-name>
-        <portlet-class>org.exoplatform.webui.application.portlet.PortletApplicationController</portlet-class>
-        <init-param>
-            <name>webui.configuration</name>
-            <!-- must match the path to configuration file -->
-            <value>/WEB-INF/conf/portlet/UIHelpPlatformToolbarPortlet/configuration.xml</value>
-        </init-param>
-        <expiration-cache>0</expiration-cache>
-        <supports>
-            <mime-type>text/html</mime-type>
-            <portlet-mode>help</portlet-mode>
-        </supports>
-        <supported-locale>en</supported-locale>
-        <resource-bundle>locale.portlet.UIHelpPlatformToolbarPortlet.UIHelpPlatformToolbarPortlet</resource-bundle>
-        <portlet-info>
-            <title>UIHelpPlatformToolbarPortlet</title>
-            <short-title>UIHelpPlatformToolbarPortlet</short-title>
-        </portlet-info>
-    </portlet>
 
-    <portlet>
-        <description xml:lang="EN">Search Portlet</description>
-        <portlet-name>UISearchPlatformToolbarPortlet</portlet-name>
-        <display-name xml:lang="EN">UISearchPlatformToolbarPortlet</display-name>
-        <portlet-class>org.exoplatform.webui.application.portlet.PortletApplicationController</portlet-class>
-        <init-param>
-            <name>webui.configuration</name>
-            <!-- must match the path to configuration file -->
-            <value>/WEB-INF/conf/portlet/UISearchPlatformToolbarPortlet/configuration.xml</value>
-        </init-param>
-        <expiration-cache>0</expiration-cache>
-        <supports>
-            <mime-type>text/html</mime-type>
-            <portlet-mode>help</portlet-mode>
-        </supports>
-        <supported-locale>en</supported-locale>
-        <resource-bundle>locale.portlet.UISearchPlatformToolbarPortlet.UISearchPlatformToolbarPortlet</resource-bundle>
-        <portlet-info>
-            <title>UISearchPlatformToolbarPortlet</title>
-            <short-title>UISearchPlatformToolbarPortlet</short-title>
-        </portlet-info>
-    </portlet>
-
-    <portlet>
-        <description xml:lang="EN">PlatformNavigation Portlet</description>
-        <portlet-name>UIUserNavigationPortlet</portlet-name>
-        <!--PLF-308-->
-        <display-name xml:lang="EN">UIUserNavigationPortlet</display-name>
-        <portlet-class>org.exoplatform.webui.application.portlet.PortletApplicationController</portlet-class>
-        <init-param>
-            <name>webui.configuration</name>
-            <!-- must match the path to configuration file -->
-            <value>/WEB-INF/conf/portlet/UIUserNavigationPortlet/configuration.xml</value>
-        </init-param>
-        <expiration-cache>0</expiration-cache>
-        <supports>
-            <mime-type>text/html</mime-type>
-            <portlet-mode>help</portlet-mode>
-        </supports>
-        <supported-locale>en</supported-locale>
-        <resource-bundle>locale.portlet.UIUserNavigationPortlet.UIUserNavigationPortlet</resource-bundle>
-        <portlet-info>
-            <title>UIUserNavigationPortlet</title>
-            <short-title>UIUserNavigationPortlet</short-title>
-        </portlet-info>
-    </portlet>
     <!-- help END-->
     <portlet>
         <description xml:lang="EN">PlatformNavigation Portlet</description>
@@ -189,29 +98,6 @@
         <portlet-info>
             <title>UICompanyNavigationPortlet</title>
             <short-title>UICompanyNavigationPortlet</short-title>
-        </portlet-info>
-    </portlet>
-
-    <portlet>
-        <description xml:lang="EN">Space PlatformNavigation Portlet</description>
-        <portlet-name>UISpaceNavigationPortlet</portlet-name>
-        <display-name xml:lang="EN">UISpaceNavigationPortlet</display-name>
-        <portlet-class>org.exoplatform.webui.application.portlet.PortletApplicationController</portlet-class>
-        <init-param>
-            <name>webui.configuration</name>
-            <!-- must match the path to configuration file -->
-            <value>/WEB-INF/conf/portlet/UISpaceNavigationPortlet/configuration.xml</value>
-        </init-param>
-        <expiration-cache>0</expiration-cache>
-        <supports>
-            <mime-type>text/html</mime-type>
-            <portlet-mode>help</portlet-mode>
-        </supports>
-        <supported-locale>en</supported-locale>
-        <resource-bundle>locale.portlet.UISpaceNavigationPortlet.UISpaceNavigationPortlet</resource-bundle>
-        <portlet-info>
-            <title>UISpaceNavigationPortlet</title>
-            <short-title>UISpaceNavigationPortlet</short-title>
         </portlet-info>
     </portlet>
 

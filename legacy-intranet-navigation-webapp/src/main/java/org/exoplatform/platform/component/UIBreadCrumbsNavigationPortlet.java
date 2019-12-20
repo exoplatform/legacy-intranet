@@ -2,20 +2,19 @@ package org.exoplatform.platform.component;
 
 import java.util.*;
 
+import org.gatein.common.text.EntityEncoder;
+
 import org.exoplatform.commons.utils.ExpressionUtil;
 import org.exoplatform.platform.common.service.MenuConfiguratorService;
 import org.exoplatform.portal.config.UserPortalConfig;
 import org.exoplatform.portal.config.model.PageNode;
-import org.exoplatform.portal.mop.user.UserNavigation;
-import org.exoplatform.portal.mop.user.UserNode;
-import org.exoplatform.portal.mop.user.UserPortal;
+import org.exoplatform.portal.mop.user.*;
 import org.exoplatform.portal.webui.util.Util;
 import org.exoplatform.webui.application.WebuiRequestContext;
 import org.exoplatform.webui.application.portlet.PortletRequestContext;
 import org.exoplatform.webui.config.annotation.ComponentConfig;
 import org.exoplatform.webui.core.UIPortletApplication;
 import org.exoplatform.webui.core.lifecycle.UIApplicationLifecycle;
-import org.gatein.common.text.EntityEncoder;
 
 /**
  * @author <a href="rtouzi@exoplatform.com">rtouzi</a>
