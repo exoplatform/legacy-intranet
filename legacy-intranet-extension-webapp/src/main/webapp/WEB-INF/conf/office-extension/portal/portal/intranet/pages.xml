@@ -167,7 +167,7 @@
 
           <portlet-application>
             <portlet>
-              <application-ref>homepage-portlets</application-ref>
+              <application-ref>social-juzu</application-ref>
               <portlet-ref>Invitations</portlet-ref>
             </portlet>
             <title>Invitations</title>
@@ -179,7 +179,7 @@
 
           <portlet-application>
             <portlet>
-              <application-ref>homepage-portlets</application-ref>
+              <application-ref>social-juzu</application-ref>
               <portlet-ref>SuggestionsPeopleSpace</portlet-ref>
             </portlet>
             <title>SuggestionsPeopleSpace</title>

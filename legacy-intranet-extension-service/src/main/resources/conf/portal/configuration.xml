@@ -6,21 +6,9 @@
   <component profiles="ecms">
     <type>org.exoplatform.platform.common.rest.services.GettingStarted.GettingStartedRestService</type>
   </component>
-  <!-- SUGGESTED PEOPLE -->
-  <component>
-    <type>org.exoplatform.platform.common.rest.services.SuggestPeoplePortlet.PeopleRestServices</type>
-  </component>
   <!-- CALENDAR -->
   <component profiles="calendar">
     <type>org.exoplatform.platform.common.rest.services.CalendarPortlet.CalendarPortletRestService</type>
-  </component>
-  <!-- SUGGEST SPACES -->
-  <component>
-    <type>org.exoplatform.platform.common.rest.services.SuggestSpacesPortlet.SpaceRestServices</type>
-  </component>
-  <!-- INVITATIONS -->
-  <component>
-    <type>org.exoplatform.platform.common.rest.services.InvitationsPortlet.PeopleAndSpacesRestService</type>
   </component>
   <component>
     <type>org.exoplatform.platform.common.rest.services.FeatureToggles.FeatureTogglesRestService</type>
@@ -86,29 +74,13 @@
     <type>org.exoplatform.platform.gadget.services.ForumStatistics.ForumRestService</type>
   </component>
 
-  <!-- NEW SPACES -->
-  <component>
-    <key>org.exoplatform.platform.gadget.services.newspaces.IntranetSpaceService</key>
-    <type>org.exoplatform.platform.gadget.services.newspaces.IntranetSpaceServiceImpl</type>
-  </component>
-
   <component>
     <type>org.exoplatform.platform.gadget.services.newspaces.NewSpaceRestService</type>
-  </component>
-
-  <!-- WHO IS ONLINE -->
-  <component>
-    <type>org.exoplatform.platform.gadget.services.Online.OnlineRestService</type>
   </component>
 
   <!--FAVORITE DOCUMENT-->
   <component profiles="ecms">
     <type>org.exoplatform.platform.gadget.services.favorite.FavoriteRESTService</type>
-  </component>
-
-  <!--INVITATIONS-->
-  <component>
-    <type>org.exoplatform.platform.gadget.services.Invitations.InvitationsRestServices</type>
   </component>
 
   <!--BOOKMARKS-->
