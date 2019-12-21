@@ -15,7 +15,6 @@
   <description>Parent POM for Legacy intranet addon.</description>
   <modules>
     <module>legacy-intranet-extension-service</module>
-    <module>legacy-intranet-webui-service</module>
     <module>legacy-intranet-extension-webapp</module>
     <module>legacy-intranet-extension-portlets</module>
     <module>legacy-intranet-homepage-webapp</module>
@@ -90,11 +89,6 @@
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>legacy-intranet-extension-service</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>legacy-intranet-webui-service</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
