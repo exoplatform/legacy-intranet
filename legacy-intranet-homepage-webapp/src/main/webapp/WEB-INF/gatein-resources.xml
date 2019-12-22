@@ -51,7 +51,6 @@
 
    <module>
       <name>jQueryGettingStarted</name>
-      <load-group>homepage-apps</load-group>
       <script>
          <path>/js/gettingstarted/gettingstarted.js</path>
       </script>

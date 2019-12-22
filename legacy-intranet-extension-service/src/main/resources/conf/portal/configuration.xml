@@ -74,10 +74,6 @@
     <type>org.exoplatform.platform.gadget.services.ForumStatistics.ForumRestService</type>
   </component>
 
-  <component>
-    <type>org.exoplatform.platform.gadget.services.newspaces.NewSpaceRestService</type>
-  </component>
-
   <!--FAVORITE DOCUMENT-->
   <component profiles="ecms">
     <type>org.exoplatform.platform.gadget.services.favorite.FavoriteRESTService</type>
