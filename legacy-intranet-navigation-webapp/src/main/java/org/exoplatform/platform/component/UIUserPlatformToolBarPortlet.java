@@ -84,7 +84,7 @@ public class UIUserPlatformToolBarPortlet extends UIPortletApplication {
   }
 
   public boolean hasSystemProfile(String profile) {
-    return ExoContainer.getCurrentProfiles().contains(profile);
+    return ExoContainer.hasProfile(profile);
   }
 
   public boolean isSocialProfileActivated() {
