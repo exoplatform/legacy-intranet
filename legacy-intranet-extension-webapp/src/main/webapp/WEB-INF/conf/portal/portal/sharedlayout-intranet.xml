@@ -90,7 +90,7 @@
         <container id="UISetupPlatformToolBarPortletID" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
           <portlet-application>
             <portlet>
-              <application-ref>commons-extension</application-ref>
+              <application-ref>platformNavigation</application-ref>
               <portlet-ref>UISetupPlatformToolBarPortlet</portlet-ref>
               <!--PLF-308 -->
             </portlet>
@@ -102,7 +102,7 @@
           <access-permissions>*:/platform/administrators; editor:/platform/web-contributors</access-permissions>
           <portlet-application>
             <portlet>
-              <application-ref>commons-extension</application-ref>
+              <application-ref>platformNavigation</application-ref>
               <portlet-ref>QuickEditLayoutPortlet</portlet-ref>
             </portlet>
             <access-permissions>*:/platform/administrators; editor:/platform/web-contributors</access-permissions>
