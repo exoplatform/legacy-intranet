@@ -17,14 +17,6 @@
                   xsi:schemaLocation="http://www.exoplatform.org/xml/ns/gatein_resources_1_4 http://www.exoplatform.org/xml/ns/gatein_resources_1_4"
                   xmlns="http://www.exoplatform.org/xml/ns/gatein_resources_1_4">
   <portlet>
-    <name>QuickEditLayoutPortlet</name>
-    <module>
-      <depends>
-        <module>bts_dropdown</module>
-      </depends>
-    </module>
-  </portlet>
-  <portlet>
     <name>UIUserInfoPortlet</name>
     <module>
       <depends>
@@ -66,6 +58,7 @@
       </depends>
     </module>
   </portlet>
+
   <portlet>
     <name>UIGroupsNavigationPortlet</name>
     <scripts>

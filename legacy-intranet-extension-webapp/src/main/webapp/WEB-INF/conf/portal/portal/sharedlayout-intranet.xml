@@ -50,7 +50,6 @@
             <portlet>
               <application-ref>platformNavigation</application-ref>
               <portlet-ref>UIUserInfoPortlet</portlet-ref>
-
             </portlet>
             <access-permissions>*:/platform/users</access-permissions>
             <show-info-bar>false</show-info-bar>
@@ -95,17 +94,6 @@
               <!--PLF-308 -->
             </portlet>
             <access-permissions>*:/platform/users</access-permissions>
-            <show-info-bar>false</show-info-bar>
-          </portlet-application>
-        </container>
-        <container id="AdminToolBarPortlet" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
-          <access-permissions>*:/platform/administrators; editor:/platform/web-contributors</access-permissions>
-          <portlet-application>
-            <portlet>
-              <application-ref>platformNavigation</application-ref>
-              <portlet-ref>QuickEditLayoutPortlet</portlet-ref>
-            </portlet>
-            <access-permissions>*:/platform/administrators; editor:/platform/web-contributors</access-permissions>
             <show-info-bar>false</show-info-bar>
           </portlet-application>
         </container>

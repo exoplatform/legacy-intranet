@@ -154,36 +154,4 @@
     </component-plugin>
   </external-component-plugins>
 
-  <external-component-plugins>
-    <target-component>org.exoplatform.platform.common.service.MenuConfiguratorService</target-component>
-    <component-plugin>
-      <name>Intranet - Remove Default Portal Setup Menu Management Plugin</name>
-      <set-method>removeNavigation</set-method>
-      <type>org.exoplatform.platform.common.service.plugin.MenuConfiguratorRemoveNodePlugin</type>
-      <init-params>
-        <object-param>
-          <name>node.config</name>
-          <object type="org.exoplatform.portal.config.model.PageNode">
-            <field name="name">
-              <string>portal</string>
-            </field>
-            <field name="pageReference">
-              <string>group::platform/administrators::branding</string>
-            </field>
-          </object>
-        </object-param>
-      </init-params>
-    </component-plugin>
-    <component-plugin>
-      <name>Intranet - Setup Menu Management Plugin</name>
-      <set-method>addNavigation</set-method>
-      <type>org.exoplatform.platform.common.service.plugin.MenuConfiguratorAddNodePlugin</type>
-      <init-params>
-        <value-param>
-          <name>extended.setup.navigation.file</name>
-          <value>jar:/conf/portal/legacy-intranet-setup-navigation.xml</value>
-        </value-param>
-      </init-params>
-    </component-plugin>
-  </external-component-plugins>
 </configuration>
