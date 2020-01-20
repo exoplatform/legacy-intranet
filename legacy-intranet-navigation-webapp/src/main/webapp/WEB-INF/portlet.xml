@@ -140,6 +140,7 @@
             <portlet-mode>help</portlet-mode>
         </supports>
         <supported-locale>en</supported-locale>
+        <resource-bundle>locale.portlet.UISetupPlatformToolBarPortlet.UISetupPlatformToolBarPortlet</resource-bundle>
         <portlet-info>
             <title>UIBreadCrumbsNavigationPortlet</title>
             <short-title>UIBreadCrumbsNavigationPortlet</short-title>
