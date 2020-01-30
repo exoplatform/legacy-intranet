@@ -1,0 +1,119 @@
+<%
+    /**
+     * Copyright ( C ) 2012 eXo Platform SAS.
+     *
+     * This is free software; you can redistribute it and/or modify it
+     * under the terms of the GNU Lesser General Public License as
+     * published by the Free Software Foundation; either version 2.1 of
+     * the License, or (at your option) any later version.
+     *
+     * This software is distributed in the hope that it will be useful,
+     * but WITHOUT ANY WARRANTY; without even the implied warranty of
+     * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+     * Lesser General Public License for more details.
+     *
+     * You should have received a copy of the GNU Lesser General Public
+     * License along with this software; if not, write to the Free
+     * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+     * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+     */
+
+%>
+<%
+    import org.exoplatform.portal.mop.user.UserNode;
+    import org.gatein.common.text.EntityEncoder;
+    import org.exoplatform.portal.webui.util.NavigationURLUtils;
+    import org.exoplatform.portal.webui.util.Util;
+    import org.apache.commons.lang3.StringUtils;
+    import org.exoplatform.commons.utils.CommonsUtils;
+    def rcontext = _ctx.getRequestContext();
+    rcontext.getJavascriptManager().require("SHARED/jquery", "jq")
+               .require("SHARED/bts_tooltip").addScripts("jq('*[rel=\"tooltip\"]').tooltip();");
+%>
+<%
+    void renderCurrentPortal() {
+        def nodes = uicomponent.getUserNodes(uicomponent.getCurrentPortalNavigation());
+        print """
+			<ul class="uiCompanyNavigations" >
+		""";
+        def remoteUser = Util.getPortalRequestContext().getRemoteUser();
+        for(UserNode node in nodes) {
+            if (StringUtils.equals(node.getName(), 'perkstore') && !CommonsUtils.isFeatureActive("perkstore", remoteUser)) {
+              continue;
+            }
+            renderPageNode(node);
+        }
+        print """
+			</ul>
+		""";
+    }
+
+    void renderPageNode(UserNode node) {
+        UserNode selectedNode = uicomponent.getSelectedPageNode();
+        String tabStyleNavigation = "navItem";
+        if(uicomponent.isSelectedPageNode(node)){
+            tabStyleNavigation = "navItemSelected";
+        }
+        String icon=node.getIcon();
+        String	href = NavigationURLUtils.getURL(node);
+        boolean toolong = (node.resolvedLabel.length() > 60);
+        String label = ( toolong ? node.resolvedLabel.substring(0, 57) + "..." : node.resolvedLabel);
+        String title = "";
+        if(toolong) title = "title='$node.resolvedLabel'";
+        else title = "";
+        EntityEncoder entityEncoder = EntityEncoder.FULL;
+        label = entityEncoder.encode(label);
+        if ((icon == null)||(icon.equals("")))
+		{
+  			if (href.lastIndexOf("/") == href.length() - 1) {
+      			href = href.substring(0, href.length() - 1);
+    			}
+  			  String hrefLower = href.trim().toLowerCase().substring(href.lastIndexOf("/") + 1, href.length());
+  		  if (hrefLower.contains("home")) {
+   			   icon = "uiIconHome";
+  		  } else if (hrefLower.contains("connexions")) {
+  			   icon = "uiIconPLFMyConnection";
+ 		   } else if (hrefLower.contains("wiki")) {
+  		       icon = "uiIconWiki";
+  		  } else if (hrefLower.contains("documents")) {
+   			   icon = "uiIconPLFDocuments";
+    	  } else if (hrefLower.contains("forum")) {
+      			icon = "uiIconUIForms";
+   		  } else if (hrefLower.contains("calendar")) {
+      			icon = "uiIconPLFCalendar";
+    	  }
+    	  else {
+    	        icon = "uiIconFile uiIconExt-$node.uri";
+    	  }
+		}
+        print """
+			<li class="$tabStyleNavigation">
+		""";
+        String idMenuItem = "MenuItem"+node.name
+        if(node.pageRef != null) {
+          print """<a href="$href" ><i class="$icon" id="$idMenuItem" data-container="body" data-placement="right" rel="tooltip" data-toggle="tooltip" $title data-original-title="$label"></i><span data-placement="bottom" rel="tooltip" data-toggle="tooltip" $title data-original-title="$label">$label</span></a>""";
+        } else {
+          print """<a href="#" ><i class="$icon" id="$idMenuItem" data-container="body" data-placement="right" rel="tooltip" data-toggle="tooltip" $title data-original-title="$label"></i><span data-placement="bottom" rel="tooltip" data-toggle="tooltip" $title data-original-title="$label">$label</span></a>""";
+        }
+        print """
+			</li>
+		""" ;
+    }
+
+    String title = uicomponent.getCompanyName();
+%>
+<div class="uiCompanyNavigationPortlet">
+    <h5 class="title accordionBar clearfix">
+      <div class="mobile-visible toggle-left-bar" id="HamburgerMenuItem">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <span class="titleText" data-placement="bottom" rel="tooltip" data-toggle="tooltip" data-original-title="$title">$title</span> <i class="uiIconArrowRight pull-right"></i>
+    </h5>
+	<div class="accordionCont">
+    <%
+        renderCurrentPortal();
+    %>
+	</div>
+</div>

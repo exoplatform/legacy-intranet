@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+<UINotificationPopoverToolbarPortlet>
+<label>
+<MarkAllAsRead>Позначити всі як прочитані</MarkAllAsRead>
+<NoNotifications>Немає повідомлень</NoNotifications>
+<InlineImage>Інтегроване зображення</InlineImage>
+<ViewAll>Переглянути все</ViewAll>
+<Loading>Завантаження</Loading>
+</label>
+</UINotificationPopoverToolbarPortlet>
+</bundle>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+<UINotificationPopoverToolbarPortlet>
+<label>
+<MarkAllAsRead>Marchează tot ca citit</MarkAllAsRead>
+<NoNotifications>Nicio notificație</NoNotifications>
+<InlineImage>Imagine în linie</InlineImage>
+<ViewAll>Vezi tot</ViewAll>
+<Loading>Se încarcă</Loading>
+</label>
+</UINotificationPopoverToolbarPortlet>
+</bundle>

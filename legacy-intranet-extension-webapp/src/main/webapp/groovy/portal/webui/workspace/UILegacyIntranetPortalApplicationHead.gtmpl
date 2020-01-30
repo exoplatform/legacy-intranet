@@ -1,0 +1,29 @@
+<%
+  import org.exoplatform.commons.api.settings.SettingService;
+  import org.exoplatform.commons.api.settings.SettingValue;
+  import org.exoplatform.commons.api.settings.data.Scope;
+  import org.exoplatform.commons.api.settings.data.Context;
+  import org.exoplatform.portal.webui.portal.UIPortal;
+  import org.exoplatform.portal.webui.util.Util;
+
+  def collapseClass = "collapse-left-bar";
+  def expandClass = "expand-left-bar";
+  def leftPanelStateClass = expandClass;
+  def userName = _ctx.getRequestContext().getRemoteUser();
+  def session = _ctx.getRequestContext().getRequest().getSession();
+
+  if(userName != null) {
+    SettingService settingService = uicomponent.getApplicationComponent(SettingService.class);
+    SettingValue<?> leftPanelStateCollapsed = settingService.get(Context.USER.id(userName), Scope.GLOBAL, "exo-platform-left-menu-collapsed");
+    if(leftPanelStateCollapsed != null && leftPanelStateCollapsed.getValue() != null) {
+      leftPanelStateClass = ((String) leftPanelStateCollapsed.getValue()).equals("true") ? collapseClass : expandClass;
+    }
+  }
+
+  def uiPortal = Util.getUIPortal();
+  def fullNavigationClass = "";
+  if (uicomponent.findComponentById("LeftNavigationPortlet") == null || (uiPortal.getMaximizedUIComponent() != null && uiPortal.getMaximizedUIComponent() instanceof org.exoplatform.portal.webui.page.UIPage)) {
+    fullNavigationClass = "full-topNavigation";
+  }
+  session.setAttribute("UIPortalApplication.body.class", fullNavigationClass + " " + leftPanelStateClass);
+%>

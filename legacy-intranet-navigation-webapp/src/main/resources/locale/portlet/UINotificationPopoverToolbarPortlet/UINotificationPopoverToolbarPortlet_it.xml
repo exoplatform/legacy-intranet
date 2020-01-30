@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+<UINotificationPopoverToolbarPortlet>
+<label>
+<MarkAllAsRead>Segna tutti come letti</MarkAllAsRead>
+<NoNotifications>Nessuna notifica</NoNotifications>
+<InlineImage>Immagine in linea</InlineImage>
+<ViewAll>Visualizza tutto</ViewAll>
+<Loading>Caricamento</Loading>
+</label>
+</UINotificationPopoverToolbarPortlet>
+</bundle>

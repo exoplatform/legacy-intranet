@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+<UINotificationPopoverToolbarPortlet>
+<label>
+<MarkAllAsRead>Σήμανση όλων ως αναγνωσμένα</MarkAllAsRead>
+<NoNotifications>Καμία ειδοποίηση</NoNotifications>
+<InlineImage>Inline image</InlineImage>
+<ViewAll>Προβολή όλων</ViewAll>
+<Loading>Γίνεται φόρτωση</Loading>
+</label>
+</UINotificationPopoverToolbarPortlet>
+</bundle>

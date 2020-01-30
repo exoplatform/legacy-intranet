@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+   <UIUserPlatformToolBarCreatePortlet>
+      <label>
+         <topic>Discussion</topic>
+         <poll>Apklausa</poll>
+         <event>Event</event>
+         <upload>File</upload>
+         <wiki>Wiki Page</wiki>
+
+      </label>
+   </UIUserPlatformToolBarCreatePortlet>
+   <UICreateList>
+      <label>
+         <topic>discussion</topic>
+         <poll>Poll</poll>
+         <CreateANew>New {1}:</CreateANew>
+         <NoForum>Sorry, no forum is available yet in which you can create the {1}. Start by creating a space first and then try again.</NoForum>
+         <RequireSelectForum>Pasirinkite forumą.</RequireSelectForum>
+      </label>
+      <action>
+         <Next>#{word.next}</Next>
+         <Cancel>#{word.cancel}</Cancel>
+      </action>
+   </UICreateList>
+   <UICreateTopic>
+      <label>
+         <SelectAForum>Pasirinkti forumą</SelectAForum>
+         <location>Vieta</location>
+         <forumId>Ir forumas</forumId>
+         <FilterForums>Filtruoti Forumus</FilterForums>
+      </label>
+   </UICreateTopic>
+   <UICreatePoll>
+      <label>
+         <SelectAForum>Pasirinkite forumą</SelectAForum>
+         <location>Vieta</location>
+         <forumId>Ir forumas</forumId>
+         <FilterForums>Filtruoti Forumus</FilterForums>
+      </label>
+   </UICreatePoll>
+   <UICreateWiki>
+      <label>
+         <title>New Wiki Page:</title>
+         <location>Location</location>
+      </label>
+   </UICreateWiki>
+   <UICreateEvent>
+      <label>
+         <Popup_title>Create a new Event</Popup_title>
+         <Title>#{word.title}</Title>
+         <Choix>Pridėti naują:</Choix>
+         <EndEvent>Iki</EndEvent>
+         <StartEvent>Nuo</StartEvent>
+         <Calendar>Calendar</Calendar>
+         <all-day>Visą dieną</all-day>
+         <defaultCalendarId>Numatytasis</defaultCalendarId>
+      </label>
+      <msg>
+         <summary-field-required>Reikalingas laukas "Pavadinimas".</summary-field-required>
+         <fromDate-format>"Nuo" datos formatas yra neteisingas.</fromDate-format>
+         <toDate-format>Datos formatas "iki" yra neteisingas.</toDate-format>
+         <logic-required>Atsiprašome, jūs negalite sukurti įvykio, kuris baigiasi jam neprasidėjus.</logic-required>
+         <cant-add-event-on-remote-calendar>Jūs negalite pridėti įvykio į nuotolinį kalendorių.</cant-add-event-on-remote-calendar>
+         <add-successfully>
+            <Event>Įvykis buvo įtrauktas į {1}</Event>
+            <Task>Užduotis buvo įtraukta į {1}</Task>
+         </add-successfully>
+         <add-unsuccessfully>{0} nebuvo įtrauktas(-a).</add-unsuccessfully>
+      </msg>
+      <action>
+         <Next>#{word.save}</Next>
+         <Cancel>#{word.cancel}</Cancel>
+      </action>
+   </UICreateEvent>
+    <UIUploadFile>
+        <Select>Pasirinkti failą</Select>
+        <action>
+          <close>#{word.close}</close>
+        </action>
+    </UIUploadFile>
+   <Choix>
+      <label>
+         <Event>Įvykis</Event>
+         <Task>Užduotis</Task>
+      </label>
+   </Choix>
+</bundle>

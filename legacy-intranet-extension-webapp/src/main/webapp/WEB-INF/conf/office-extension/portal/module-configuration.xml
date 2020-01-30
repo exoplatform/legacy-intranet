@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+
+    Copyright (C) 2009 eXo Platform SAS.
+    
+    This is free software; you can redistribute it and/or modify it
+    under the terms of the GNU Lesser General Public License as
+    published by the Free Software Foundation; either version 2.1 of
+    the License, or (at your option) any later version.
+    
+    This software is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+    Lesser General Public License for more details.
+    
+    You should have received a copy of the GNU Lesser General Public
+    License along with this software; if not, write to the Free
+    Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+    02110-1301 USA, or see the FSF site: http://www.fsf.org.
+
+-->
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd http://www.exoplatform.org/xml/ns/kernel_1_2.xsd" xmlns="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd">
+
+  <external-component-plugins>
+    <target-component>org.exoplatform.portal.module.ModuleRegistry</target-component>
+    <component-plugin>
+      <name>ACMEIntranetModulesDefinition</name>
+      <set-method>addModule</set-method>
+      <type>org.exoplatform.portal.module.ModulePlugin</type>
+      <description>Modules definition for Acme intranet applications</description>
+      <init-params>
+        <object-param>
+          <name>wiki.webapps</name>
+          <object type="org.exoplatform.portal.module.Module">
+            <field name="name">
+              <string>wiki</string>
+            </field>
+            <field name="description">
+              <string>wiki profile modules</string>
+            </field>
+            <field name="webapps">
+              <collection type="java.util.ArrayList">
+                <value>
+                  <string>wiki</string>
+                </value>
+              </collection>
+            </field>
+          <!-- List of portletId = {webappName}/portletName -->
+            <field name="portlets">
+              <collection type="java.util.ArrayList" />
+            </field>
+          </object>
+        </object-param>
+        <object-param>
+          <name>calendar.webapps</name>
+          <object type="org.exoplatform.portal.module.Module">
+            <field name="name">
+              <string>calendar</string>
+            </field>
+            <field name="description">
+              <string>calendar profile modules</string>
+            </field>
+            <field name="webapps">
+              <collection type="java.util.ArrayList">
+                <value>
+                  <string>calendar</string>
+                </value>
+              </collection>
+            </field>
+          </object>
+        </object-param>
+        <object-param>
+          <name>forum.webapps</name>
+          <object type="org.exoplatform.portal.module.Module">
+            <field name="name">
+              <string>forum</string>
+            </field>
+            <field name="description">
+              <string>forum profile modules</string>
+            </field>
+            <field name="webapps">
+              <collection type="java.util.ArrayList">
+                <value>
+                  <string>forum</string>
+                </value>
+              </collection>
+            </field>
+          </object>
+        </object-param>
+        <object-param>
+          <name>ecms.webapps</name>
+          <object type="org.exoplatform.portal.module.Module">
+            <field name="name">
+              <string>ecms</string>
+            </field>
+            <field name="description">
+              <string>ecms profile modules</string>
+            </field>
+            <field name="webapps">
+              <collection type="java.util.ArrayList">
+                <value>
+                  <string>eXoWCMResources</string>
+                </value>
+                <value>
+                  <string>ecmexplorer</string>
+                </value>
+                <value>
+                  <string>ecmadmin</string>
+                </value>
+                <value>
+                  <string>ecm-wcm-core</string>
+                </value>
+                <value>
+                  <string>ecm-wcm-extension</string>
+                </value>
+                <value>
+                  <string>presentation</string>
+                </value>
+                <value>
+                  <string>searches</string>
+                </value>
+                <value>
+                  <string>authoring-apps</string>
+                </value>
+                <value>
+                  <string>seo</string>
+                </value>
+              </collection>
+            </field>
+          <!-- List of portletId = {webappName}/portletName -->
+            <field name="portlets">
+              <collection type="java.util.ArrayList" />
+            </field>
+          </object>
+        </object-param>
+      </init-params>
+    </component-plugin>
+  </external-component-plugins>
+</configuration>

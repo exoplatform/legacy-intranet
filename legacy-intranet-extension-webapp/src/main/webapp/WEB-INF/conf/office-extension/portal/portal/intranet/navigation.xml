@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2003-2007 eXo Platform SAS.
+
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Affero General Public License
+    as published by the Free Software Foundation; either version 3
+    of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, see<http://www.gnu.org/licenses/>.
+
+-->
+<node-navigation
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_objects_1_6 http://www.gatein.org/xml/ns/gatein_objects_1_6"
+        xmlns="http://www.gatein.org/xml/ns/gatein_objects_1_6">
+  <priority>1</priority>
+
+  <page-nodes>
+
+    <node>
+      <name>home</name>
+      <label>#{portal.intranet.home}</label>
+      <page-reference>portal::intranet::homepage</page-reference>
+    </node>
+
+    <node>
+      <name>connexions</name>
+      <label>#{portal.intranet.people}</label>
+      <page-reference>portal::intranet::people</page-reference>
+
+      <node>
+        <name>people</name>
+        <label>#{portal.intranet.people}</label>
+        <page-reference>portal::intranet::people</page-reference>
+      </node>
+
+      <node>
+        <name>network</name>
+        <label>#{portal.intranet.people}</label>
+        <page-reference>portal::intranet::connections</page-reference>
+      </node>
+
+      <node>
+        <name>receivedInvitations</name>
+        <label>#{portal.intranet.people}</label>
+        <page-reference>portal::intranet::invitations</page-reference>
+      </node>
+
+      <node>
+        <name>pendingRequests</name>
+        <label>#{portal.intranet.people}</label>
+        <page-reference>portal::intranet::requests</page-reference>
+      </node>
+    </node>
+
+    <node>
+      <name>activities</name>
+      <label>#{portal.intranet.activities}</label>
+      <visibility>SYSTEM</visibility>
+      <page-reference>portal::intranet::activities</page-reference>
+    </node>
+
+    <node>
+      <name>allNotifications</name>
+      <label>#{portal.intranet.allNotifications}</label>
+      <visibility>SYSTEM</visibility>
+      <page-reference>portal::intranet::allNotifications</page-reference>
+    </node>
+
+    <node>
+      <name>activity</name>
+      <label>#{portal.intranet.activity}</label>
+      <visibility>SYSTEM</visibility>
+      <page-reference>portal::intranet::activity</page-reference>
+    </node>
+
+    <node>
+      <name>profile</name>
+      <label>#{portal.intranet.profile}</label>
+      <visibility>SYSTEM</visibility>
+      <page-reference>portal::intranet::profile</page-reference>
+    </node>
+
+    <node>
+      <name>edit-profile</name>
+      <label>#{portal.intranet.edit-profile}</label>
+      <visibility>SYSTEM</visibility>
+      <page-reference>portal::intranet::edit-profile</page-reference>
+    </node>
+
+    <node>
+      <name>notifications</name>
+      <label>#{portal.intranet.notifications}</label>
+      <visibility>SYSTEM</visibility>
+      <page-reference>portal::intranet::notifications</page-reference>
+    </node>
+
+    <node>
+      <name>connections</name>
+      <label>#{portal.intranet.connections}</label>
+      <visibility>SYSTEM</visibility>
+      <node>
+        <name>all-people</name>
+        <label>#{portal.intranet.yours}</label>
+        <page-reference>portal::intranet::all-people</page-reference>
+      </node>
+
+      <node>
+        <name>network</name>
+        <label>#{portal.intranet.yours}</label>
+        <page-reference>portal::intranet::network</page-reference>
+      </node>
+
+      <node>
+        <name>receivedInvitations</name>
+        <label>#{portal.intranet.invitations}</label>
+        <page-reference>portal::intranet::receivedInvitations</page-reference>
+      </node>
+
+      <node>
+        <name>pendingRequests</name>
+        <label>#{portal.intranet.requests}</label>
+        <page-reference>portal::intranet::pendingRequests</page-reference>
+      </node>
+      <node>
+        <name>yours</name>
+        <label>#{portal.intranet.yours}</label>
+        <page-reference>portal::intranet::connections</page-reference>
+      </node>
+      <node>
+        <name>invitations</name>
+        <label>#{portal.intranet.invitations}</label>
+        <page-reference>portal::intranet::invitations</page-reference>
+      </node>
+      <node>
+        <name>requests</name>
+        <label>#{portal.intranet.requests}</label>
+        <page-reference>portal::intranet::requests</page-reference>
+      </node>
+    </node>
+
+    <node>
+      <name>all-spaces</name>
+      <label>#{portal.intranet.allSpaces}</label>
+      <visibility>SYSTEM</visibility>
+      <page-reference>portal::intranet::all-spaces</page-reference>
+    </node>
+
+    <node>
+      <name>spaces</name>
+      <label>#{portal.intranet.spaces}</label>
+      <visibility>SYSTEM</visibility>
+      <page-reference>portal::intranet::spaces</page-reference>
+    </node>
+
+    <node>
+      <name>invitationSpace</name>
+      <label>#{portal.intranet.invitationSpace}</label>
+      <visibility>SYSTEM</visibility>
+      <page-reference>portal::intranet::invitationSpace</page-reference>
+    </node>
+
+    <node>
+      <name>pendingSpace</name>
+      <label>#{portal.intranet.pendingSpace}</label>
+      <visibility>SYSTEM</visibility>
+      <page-reference>portal::intranet::pendingSpace</page-reference>
+    </node>
+
+    <node>
+      <name>publicSpace</name>
+      <label>#{portal.intranet.publicSpace}</label>
+      <visibility>SYSTEM</visibility>
+      <page-reference>portal::intranet::publicSpace</page-reference>
+    </node>
+
+    <node>
+      <name>space-access</name>
+      <label>#{portal.intranet.spaces}</label>
+      <visibility>SYSTEM</visibility>
+      <page-reference>portal::intranet::space-access</page-reference>
+    </node>
+
+    <!-- Temporary node for unified search testing -->
+    <node>
+      <name>search</name>
+      <label>#{portal.intranet.searchResult}</label>
+      <visibility>SYSTEM</visibility>
+      <page-reference>portal::intranet::search</page-reference>
+    </node>
+
+  </page-nodes>
+</node-navigation>
