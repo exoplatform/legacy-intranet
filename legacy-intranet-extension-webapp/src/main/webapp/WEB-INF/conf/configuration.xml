@@ -33,6 +33,8 @@
   <import>war:/conf/office-extension/portal/resource-bundle-configuration.xml</import>
   <import>war:/conf/office-extension/portal/legacy-portal-configuration.xml</import>
 
+  <import>war:/conf/office-extension/portal/dynamic-container-configuration.xml</import>
+
   <import profiles="wiki">war:/conf/office-extension/portal/addons/wiki/portal-configuration.xml</import>
   <import profiles="ecms">war:/conf/office-extension/portal/addons/ecms/portal-configuration.xml</import>
   <import profiles="forum">war:/conf/office-extension/portal/addons/forum/portal-configuration.xml</import>

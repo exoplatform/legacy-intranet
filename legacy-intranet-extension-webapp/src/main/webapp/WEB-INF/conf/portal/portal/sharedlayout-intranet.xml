@@ -97,6 +97,11 @@
             <show-info-bar>false</show-info-bar>
           </portlet-application>
         </container>
+        <container id="AdminToolBarPortlet" template="system:/groovy/portal/webui/container/UIAddOnContainer.gtmpl">
+          <name>AdminToolBarPortlet</name>
+          <access-permissions>*:/platform/administrators; editor:/platform/web-contributors</access-permissions>
+          <factory-id>addonContainer</factory-id>
+        </container>
         <container id="middle-topNavigation-container" template="system:/groovy/portal/webui/container/UIAddOnContainer.gtmpl">
           <name>middle-topNavigation-container</name>
           <factory-id>addonContainer</factory-id>
