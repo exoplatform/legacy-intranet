@@ -45,7 +45,7 @@
         <value-param>
           <name>override</name>
           <description>The flag parameter to decide if portal metadata is overriden on restarting server</description>
-          <value>${intranet.portalConfig.metadata.override:false}</value>
+          <value>${exo.intranet.portalConfig.metadata.override:false}</value>
         </value-param>
 				<object-param>
 					<name>portal.configuration</name>
@@ -65,7 +65,7 @@
 							<string>war:/conf/office-extension/portal</string>
 						</field>
 						<field name="importMode">
-							<string>${intranet.portalConfig.metadata.importmode:insert}</string>
+							<string>${exo.intranet.portalConfig.metadata.importmode:insert}</string>
 						</field>
 					</object>
 				</object-param>
