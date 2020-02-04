@@ -2,6 +2,7 @@ package org.exoplatform.platform.component;
 
 import java.util.*;
 
+import org.exoplatform.container.ExoContainer;
 import org.exoplatform.forum.create.UICreateForm;
 import org.exoplatform.services.log.ExoLogger;
 import org.exoplatform.services.log.Log;
@@ -97,7 +98,7 @@ public class UICreateList extends UIContainer {
           UIComponent component = uiList.addChild(extension.getComponent(), null, null);
           if (component != null) {
               //
-              if (component instanceof org.exoplatform.forum.create.UICreateForm) {
+              if (ExoContainer.hasProfile("forum") && component instanceof org.exoplatform.forum.create.UICreateForm) {
                 UICreateForm form = (UICreateForm)component;
                 String par;
                 try {

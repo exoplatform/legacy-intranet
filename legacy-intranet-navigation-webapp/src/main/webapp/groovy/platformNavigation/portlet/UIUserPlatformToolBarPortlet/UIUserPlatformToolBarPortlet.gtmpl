@@ -65,20 +65,18 @@
             <img src="<%=uicomponent.getAvatarURL()%>" alt="avatar"/> $fullName
         </a>
         <ul class="dropdown-menu">
-          <% if (uicomponent.isSocialPortal()) { %>
-            <li class="clearfix action_top mobile-visible"></li>
-            <li class="clearfix avatar-help-action mobile-visible"></li>
-            <li class="divider top mobile-visible">&nbsp;</li>
-            <li>
-              <a href="$profileLink"><i class="uiIconPLFProfile"></i>$labelProfile</a>
-            </li>
-            <li>
-              <a href="$activitiesLink"><i class="uiIconPLFActivityStream"></i>$labelActivities</a>
-            </li>
-           	<li>
-              <a href="$connectionLink"><i class="uiIconPLFMyConnection"></i>$labelnetwork</a>
-            </li>
-          <% } %>
+          <li class="clearfix action_top mobile-visible"></li>
+          <li class="clearfix avatar-help-action mobile-visible"></li>
+          <li class="divider top mobile-visible">&nbsp;</li>
+          <li>
+            <a href="$profileLink"><i class="uiIconPLFProfile"></i>$labelProfile</a>
+          </li>
+          <li>
+            <a href="$activitiesLink"><i class="uiIconPLFActivityStream"></i>$labelActivities</a>
+          </li>
+          <li>
+            <a href="$connectionLink"><i class="uiIconPLFMyConnection"></i>$labelnetwork</a>
+          </li>
           <% if (uicomponent.hasSystemProfile("wiki")) { %>
             <li>
               <a href="$wikiLink"><i class="uiIconWikiMyWiki"></i>$labelWiki</a>

@@ -51,26 +51,6 @@ public class UICreatePlatformToolBarPortlet extends UIPortletApplication {
         return uiParent.getChild(T).getId();
     }
 
-    public boolean isSocialPortal() {
-        if (currentPortalName != null && getCurrentPortalName().equals(currentPortalName)) {
-            return socialPortal;
-        }
-        if (!isSocialProfileActivated()) {
-            socialPortal = false;
-        } else {
-            currentPortalName = getCurrentPortalName();
-            UserPortal userPortal = getUserPortal();
-            UserNavigation userNavigation = userPortal.getNavigation(SiteKey.portal(currentPortalName));
-            UserNode portalNode = userPortal.getNode(userNavigation, Scope.CHILDREN, null, null);
-            socialPortal = portalNode.getChild("spaces") != null;
-        }
-        return socialPortal;
-    }
-
-    public boolean isSocialProfileActivated() {
-        return ExoContainer.hasProfile("social");
-    }
-
     public static UserPortal getUserPortal() {
         UserPortalConfig portalConfig = Util.getPortalRequestContext().getUserPortalConfig();
         return portalConfig.getUserPortal();

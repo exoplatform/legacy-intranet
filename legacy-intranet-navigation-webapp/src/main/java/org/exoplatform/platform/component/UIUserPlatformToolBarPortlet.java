@@ -67,28 +67,8 @@ public class UIUserPlatformToolBarPortlet extends UIPortletApplication {
     return Util.getPortalRequestContext().getPortalOwner();
   }
 
-  public boolean isSocialPortal() {
-    if (currentPortalName != null && getCurrentPortalName().equals(currentPortalName)) {
-      return socialPortal;
-    }
-    if (!isSocialProfileActivated()) {
-      socialPortal = false;
-    } else {
-      currentPortalName = getCurrentPortalName();
-      UserPortal userPortal = getUserPortal();
-      UserNavigation userNavigation = userPortal.getNavigation(SiteKey.portal(currentPortalName));
-      UserNode portalNode = userPortal.getNode(userNavigation, Scope.CHILDREN, null, null);
-      socialPortal = portalNode.getChild("spaces") != null;
-    }
-    return socialPortal;
-  }
-
   public boolean hasSystemProfile(String profile) {
     return ExoContainer.hasProfile(profile);
-  }
-
-  public boolean isSocialProfileActivated() {
-    return hasSystemProfile("social");
   }
 
   public static UserPortal getUserPortal() {
@@ -110,16 +90,14 @@ public class UIUserPlatformToolBarPortlet extends UIPortletApplication {
   }
 
     public String getAvatarURL() {
-        String ownerAvatar = null;
-        if (isSocialProfileActivated()) {
-            Identity identity = Utils.getIdentityManager().getOrCreateIdentity(OrganizationIdentityProvider.NAME,Util.getPortalRequestContext().getRemoteUser(), true);
-            ownerAvatar = identity.getProfile().getAvatarUrl();
-        }
-
-        if (ownerAvatar == null || ownerAvatar.isEmpty()) {
-            ownerAvatar = LinkProvider.PROFILE_DEFAULT_AVATAR_URL;
-        }
-        return ownerAvatar;
+      Identity identity = Utils.getIdentityManager()
+                               .getOrCreateIdentity(OrganizationIdentityProvider.NAME,
+                                                    Util.getPortalRequestContext().getRemoteUser());
+      String ownerAvatar = identity.getProfile().getAvatarUrl();
+      if (ownerAvatar == null || ownerAvatar.isEmpty()) {
+        ownerAvatar = LinkProvider.PROFILE_DEFAULT_AVATAR_URL;
+      }
+      return ownerAvatar;
     }
 
     public String getWikiURL() {

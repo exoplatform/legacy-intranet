@@ -33,7 +33,6 @@ import org.exoplatform.platform.component.UICreateForm;
 
 def rcontext = _ctx.getRequestContext() ;
 JavascriptManager jsmanager = rcontext.getJavascriptManager();
- if(uicomponent.isSocialPortal()){
 %>
 
 <div class="uiCreateToolBarPortlet uiDropdownWithIcon dropdown pull-right" id="$uicomponent.id">
@@ -42,6 +41,5 @@ JavascriptManager jsmanager = rcontext.getJavascriptManager();
 </div>
 
 <%uicomponent.renderChild(UIPopupContainer.class);%>
-<%}%>
 
 
