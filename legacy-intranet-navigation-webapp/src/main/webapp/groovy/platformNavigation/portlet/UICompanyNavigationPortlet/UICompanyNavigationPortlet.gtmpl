@@ -32,15 +32,12 @@
 %>
 <%
     void renderCurrentPortal() {
-        def nodes = uicomponent.getUserNodes(uicomponent.getCurrentPortalNavigation());
+        def nodes = uicomponent.getUserNodes();
         print """
 			<ul class="uiCompanyNavigations" >
 		""";
         def remoteUser = Util.getPortalRequestContext().getRemoteUser();
         for(UserNode node in nodes) {
-            if (StringUtils.equals(node.getName(), 'perkstore') && !CommonsUtils.isFeatureActive("perkstore", remoteUser)) {
-              continue;
-            }
             renderPageNode(node);
         }
         print """

@@ -175,27 +175,5 @@
       <page-reference>portal::intranet::pendingSpace</page-reference>
     </node>
 
-    <node>
-      <name>publicSpace</name>
-      <label>#{portal.intranet.publicSpace}</label>
-      <visibility>SYSTEM</visibility>
-      <page-reference>portal::intranet::publicSpace</page-reference>
-    </node>
-
-    <node>
-      <name>space-access</name>
-      <label>#{portal.intranet.spaces}</label>
-      <visibility>SYSTEM</visibility>
-      <page-reference>portal::intranet::space-access</page-reference>
-    </node>
-
-    <!-- Temporary node for unified search testing -->
-    <node>
-      <name>search</name>
-      <label>#{portal.intranet.searchResult}</label>
-      <visibility>SYSTEM</visibility>
-      <page-reference>portal::intranet::search</page-reference>
-    </node>
-
   </page-nodes>
 </node-navigation>

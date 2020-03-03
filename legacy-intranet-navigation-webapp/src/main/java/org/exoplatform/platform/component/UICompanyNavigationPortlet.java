@@ -23,8 +23,7 @@ import java.util.*;
 
 import org.exoplatform.portal.application.PortalRequestContext;
 import org.exoplatform.portal.branding.BrandingService;
-import org.exoplatform.portal.mop.SiteKey;
-import org.exoplatform.portal.mop.Visibility;
+import org.exoplatform.portal.mop.*;
 import org.exoplatform.portal.mop.navigation.Scope;
 import org.exoplatform.portal.mop.user.*;
 import org.exoplatform.portal.webui.util.Util;
@@ -70,6 +69,20 @@ public class UICompanyNavigationPortlet extends UIPortletApplication {
     return Util.getPortalRequestContext().getPortalOwner();
   }
 
+  public Collection<UserNode> getUserNodes() {
+    UserPortal userPortal = getUserPortal();
+    return userPortal.getNodes(SiteType.PORTAL, Scope.ALL, userFilterConfig);
+  }
+
+  /**
+   * Return list of navigation nodes with visibility DISPLAYED or TEMPORAL
+   *
+   * @param nav current user navigation
+   * @return {@link List} of {@link UserNode}
+   * @deprecated Use {@link UICompanyNavigationPortlet#getUserNodes()} instead
+   *             to include global site navigation nodes too
+   */
+  @Deprecated
   public Collection<UserNode> getUserNodes(UserNavigation nav) {
     UserPortal userPortall = getUserPortal();
     if (nav != null) {
