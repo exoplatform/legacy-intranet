@@ -65,6 +65,12 @@
             <show-info-bar>false</show-info-bar>
           </portlet-application>
         </container>
+        <container id="AppCenterAppLauncherPortlet"
+          template="system:/groovy/portal/webui/container/UIAddOnContainer.gtmpl">
+          <name>AppCenterAppLauncherPortlet</name>
+          <access-permissions>*:/platform/users</access-permissions>
+          <factory-id>addonContainer</factory-id>
+        </container>
         <container id="SearchPortlet" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
           <portlet-application>
             <portlet>
