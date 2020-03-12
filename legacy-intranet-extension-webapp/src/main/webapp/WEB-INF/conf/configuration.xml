@@ -31,6 +31,7 @@
 	<import>war:/conf/office-extension/social/profiles-configuration.xml</import>
   <import>war:/conf/office-extension/portal/resource-bundle-configuration.xml</import>
   <import>war:/conf/office-extension/portal/legacy-portal-configuration.xml</import>
+  <import>war:/conf/office-extension/portal/setup-menu-configuration.xml</import>
 
   <import>war:/conf/office-extension/portal/dynamic-container-configuration.xml</import>
 
