@@ -9,7 +9,7 @@
   </parent>
   <groupId>org.exoplatform.addons.legacy-intranet</groupId>
   <artifactId>legacy-intranet</artifactId>
-  <version>6.0.x-SNAPSHOT</version>
+  <version>6.1.x-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>eXo Addons:: Legacy intranet</name>
   <description>Parent POM for Legacy intranet addon.</description>
@@ -40,13 +40,13 @@
     <!-- Project Dependencies -->
     <!-- **************************************** -->
     <!-- legacy Intranet Project Dependencies -->
-    <org.exoplatform.social.version>6.0.x-SNAPSHOT</org.exoplatform.social.version>
-    <addon.exo.ecms.version>6.0.x-SNAPSHOT</addon.exo.ecms.version>
-    <addon.exo.forum.version>6.0.x-SNAPSHOT</addon.exo.forum.version>
-    <addon.exo.wiki.version>6.0.x-SNAPSHOT</addon.exo.wiki.version>
-    <addon.exo.calendar.version>6.0.x-SNAPSHOT</addon.exo.calendar.version>
-    <addon.exo.jcr.version>6.0.x-SNAPSHOT</addon.exo.jcr.version>
-    <org.exoplatform.platform-ui.version>6.0.x-SNAPSHOT</org.exoplatform.platform-ui.version>
+    <org.exoplatform.social.version>6.1.x-SNAPSHOT</org.exoplatform.social.version>
+    <addon.exo.ecms.version>6.1.x-SNAPSHOT</addon.exo.ecms.version>
+    <addon.exo.forum.version>6.1.x-SNAPSHOT</addon.exo.forum.version>
+    <addon.exo.wiki.version>6.1.x-SNAPSHOT</addon.exo.wiki.version>
+    <addon.exo.calendar.version>6.1.x-SNAPSHOT</addon.exo.calendar.version>
+    <addon.exo.jcr.version>6.1.x-SNAPSHOT</addon.exo.jcr.version>
+    <org.exoplatform.platform-ui.version>6.1.x-SNAPSHOT</org.exoplatform.platform-ui.version>
   </properties>
   <dependencyManagement>
     <dependencies>
