@@ -4,16 +4,16 @@
       <label>
          <topic>Discussion</topic>
          <poll>Enkät</poll>
-         <event>Event</event>
+         <event>Händelse</event>
          <upload>File</upload>
-         <wiki>Wiki Page</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
    <UICreateList>
       <label>
          <topic>discussion</topic>
-         <poll>Poll</poll>
+         <poll>Enkät</poll>
          <CreateANew>New {1}:</CreateANew>
          <NoForum>Sorry, no forum is available yet in which you can create the {1}. Start by creating a space first and then try again.</NoForum>
          <RequireSelectForum>Välj ett forum.</RequireSelectForum>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>New Wiki Page:</title>
+         <title>New Note:</title>
          <location>Location</location>
       </label>
    </UICreateWiki>

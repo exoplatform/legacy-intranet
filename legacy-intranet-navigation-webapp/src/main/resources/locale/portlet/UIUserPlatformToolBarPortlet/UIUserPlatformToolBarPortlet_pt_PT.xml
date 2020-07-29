@@ -2,15 +2,15 @@
 <bundle>
 <UIUserPlatformToolBarPortlet>
 <label>
-<NotificationSettingsPortlet>As minhas notificações</NotificationSettingsPortlet>
-<activities>As minhas atividades</activities>
-<profile>O meu perfil</profile>
+<NotificationSettingsPortlet>As Minhas Notificações</NotificationSettingsPortlet>
+<activities>A minha atividade</activities>
+<profile>O Meu Perfil</profile>
 <network>As minhas ligações</network>
-<wiki>A minha wiki</wiki>
+<wiki>My Notes</wiki>
 <wallet>Minha Carteira</wallet>
 <achievements>My Achievements</achievements>
-<account>A minha conta</account>
-<language>Mudar idioma</language>
+<account>Conta</account>
+<language>Mudar Idioma</language>
 <logout>Sair</logout>
 </label>
 </UIUserPlatformToolBarPortlet>

@@ -6,7 +6,7 @@
 <NoNotifications>Tidak ada pemberitahuan</NoNotifications>
 <InlineImage>Gambar Sejajar</InlineImage>
 <ViewAll>Lihat Semua</ViewAll>
-<Loading>Sedang Memuat</Loading>
+<Loading>Sedang memuat</Loading>
 </label>
 </UINotificationPopoverToolbarPortlet>
 </bundle>

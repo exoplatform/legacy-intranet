@@ -3,10 +3,10 @@
 <UINotificationPopoverToolbarPortlet>
 <label>
 <MarkAllAsRead>Markeer alle berichten als gelezen</MarkAllAsRead>
-<NoNotifications>Geen meldingen</NoNotifications>
+<NoNotifications>Geen notificatie</NoNotifications>
 <InlineImage>Inline-afbeelding</InlineImage>
-<ViewAll>Alles Bekijken</ViewAll>
-<Loading>Bezig met laden</Loading>
+<ViewAll>Alle bekijken</ViewAll>
+<Loading>Laden</Loading>
 </label>
 </UINotificationPopoverToolbarPortlet>
 </bundle>

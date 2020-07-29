@@ -6,7 +6,7 @@
          <poll>نظرسنجی</poll>
          <event>رویداد</event>
          <upload>آپلود فایل</upload>
-         <wiki>صفحه ویکی</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>ایجاد یک صفحه جدید ویکی:</title>
+         <title>New Note:</title>
          <location>در محل</location>
       </label>
    </UICreateWiki>

@@ -3,9 +3,9 @@
 <UINotificationPopoverToolbarPortlet>
 <label>
 <MarkAllAsRead>Marca-ho tot com a llegit</MarkAllAsRead>
-<NoNotifications>Sense notificacions</NoNotifications>
+<NoNotifications>No hi ha cap notificació</NoNotifications>
 <InlineImage>Imatge en línia</InlineImage>
-<ViewAll>Mostrar-ho tot</ViewAll>
+<ViewAll>Veure-ho tot</ViewAll>
 <Loading>Carregant</Loading>
 </label>
 </UINotificationPopoverToolbarPortlet>

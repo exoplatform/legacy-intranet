@@ -6,7 +6,7 @@
          <poll>Botohan</poll>
          <event>Kaganapan</event>
          <upload>File</upload>
-         <wiki>Pahina ng wiki</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>Bagong pahina sa Wiki:</title>
+         <title>New Note:</title>
          <location>Lokasyon</location>
       </label>
    </UICreateWiki>

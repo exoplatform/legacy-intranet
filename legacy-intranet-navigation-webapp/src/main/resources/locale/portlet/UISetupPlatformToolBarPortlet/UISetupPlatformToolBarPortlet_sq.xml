@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bundle>
-<UISetupPlatformToolBarPortlet>
-<label>
-<applications>crwdns6785977:0crwdne6785977:0</applications>
-<content>crwdns6785978:0crwdne6785978:0</content>
-<siteExplorer>crwdns6785979:0crwdne6785979:0</siteExplorer>
-<wcmAdmin>crwdns6785980:0crwdne6785980:0</wcmAdmin>
-<users>crwdns6822211:0crwdne6822211:0</users>
-<newStaff>crwdns6785982:0crwdne6785982:0</newStaff>
-<org-management>crwdns6812635:0crwdne6812635:0</org-management>
-<portal>crwdns6785984:0crwdne6785984:0</portal>
-<administration>crwdns6785985:0crwdne6785985:0</administration>
-<system>crwdns6858936:0crwdne6858936:0</system>
-<groupnavigation>crwdns6785986:0crwdne6785986:0</groupnavigation>
-<pageManagement>crwdns6785987:0crwdne6785987:0</pageManagement>
-<portalnavigation>crwdns6785988:0crwdne6785988:0</portalnavigation>
-<spaces>crwdns6785991:0crwdne6785991:0</spaces>
-<Branding>crwdns6785992:0crwdne6785992:0</Branding>
-      <Notification>crwdns6812528:0crwdne6812528:0</Notification>
-<ide>crwdns6785994:0crwdne6785994:0</ide>
-<search>crwdns6785995:0crwdne6785995:0</search>
-</label>
-</UISetupPlatformToolBarPortlet>
+  <UISetupPlatformToolBarPortlet>
+    <label>
+      <applications>crwdns6940856:0crwdne6940856:0</applications>
+      <content>crwdns6940858:0crwdne6940858:0</content>
+      <siteExplorer>crwdns6940860:0crwdne6940860:0</siteExplorer>
+      <wcmAdmin>crwdns6940862:0crwdne6940862:0</wcmAdmin>
+      <users>crwdns6940864:0crwdne6940864:0</users>
+      <newStaff>crwdns6940866:0crwdne6940866:0</newStaff>
+      <org-management>crwdns6940868:0crwdne6940868:0</org-management>
+      <portal>crwdns6940870:0crwdne6940870:0</portal>
+      <administration>crwdns6940872:0crwdne6940872:0</administration>
+      <system>crwdns6940874:0crwdne6940874:0</system>
+      <groupnavigation>crwdns6940876:0crwdne6940876:0</groupnavigation>
+      <pageManagement>crwdns6940878:0crwdne6940878:0</pageManagement>
+      <portalnavigation>crwdns6940880:0crwdne6940880:0</portalnavigation>
+      <spaces>crwdns6940882:0crwdne6940882:0</spaces>
+      <spacesTemplates>crwdns6940884:0crwdne6940884:0</spacesTemplates>
+      <spacesAdministration>crwdns6940886:0crwdne6940886:0</spacesAdministration>
+      <Branding>crwdns6940888:0crwdne6940888:0</Branding>
+      <Notification>crwdns6940890:0crwdne6940890:0</Notification>
+      <search>crwdns6940892:0crwdne6940892:0</search>
+      <searchIndexing>crwdns6940894:0crwdne6940894:0</searchIndexing>
+    </label>
+  </UISetupPlatformToolBarPortlet>
 </bundle>

@@ -3,10 +3,10 @@
 <UIUserPlatformToolBarPortlet>
 <label>
 <NotificationSettingsPortlet>Bildirimlerim</NotificationSettingsPortlet>
-<activities>Faliyetlerim</activities>
+<activities>Benim Faliyetlerim</activities>
 <profile>Profilim</profile>
 <network>Bağlantılarım</network>
-<wiki>Wikim</wiki>
+<wiki>My Notes</wiki>
 <wallet>My Wallet</wallet>
 <achievements>My Achievements</achievements>
 <account>Hesap</account>

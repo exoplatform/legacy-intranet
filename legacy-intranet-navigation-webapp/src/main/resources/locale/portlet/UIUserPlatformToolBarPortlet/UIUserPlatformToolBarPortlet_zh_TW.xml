@@ -2,14 +2,14 @@
 <bundle>
 <UIUserPlatformToolBarPortlet>
 <label>
-<NotificationSettingsPortlet>My Notifications</NotificationSettingsPortlet>
-<activities>My Activities</activities>
+<NotificationSettingsPortlet>我的通知</NotificationSettingsPortlet>
+<activities>我的活動</activities>
 <profile>我的設定檔</profile>
 <network>我的聯繫</network>
-<wiki>我的 Wiki</wiki>
+<wiki>My Notes</wiki>
 <wallet>My Wallet</wallet>
 <achievements>My Achievements</achievements>
-<account>Account</account>
+<account>帳號</account>
 <language>更改語言</language>
 <logout>登出</logout>
 </label>

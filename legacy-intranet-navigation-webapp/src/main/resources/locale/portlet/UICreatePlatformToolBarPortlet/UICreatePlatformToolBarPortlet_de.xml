@@ -6,7 +6,7 @@
          <poll>Umfrage</poll>
          <event>Ereignis</event>
          <upload>Eine Datei hochladen</upload>
-         <wiki>Wiki-Seite</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>eine neue Wiki-Seite erstellen:</title>
+         <title>New Note:</title>
          <location>In</location>
       </label>
    </UICreateWiki>

@@ -2,16 +2,16 @@
 <bundle>
 <UIUserPlatformToolBarPortlet>
 <label>
-<NotificationSettingsPortlet>Aking mga abiso</NotificationSettingsPortlet>
+<NotificationSettingsPortlet>My Notifications</NotificationSettingsPortlet>
 <activities>Aking mga gawain</activities>
-<profile>Aking Profile</profile>
-<network>Aking mga koneksyon</network>
-<wiki>Aking wiki</wiki>
+<profile>My Profile</profile>
+<network>My Connections</network>
+<wiki>My Notes</wiki>
 <wallet>My Wallet</wallet>
 <achievements>My Achievements</achievements>
 <account>Ang account</account>
-<language>Palitan ang wika</language>
-<logout>Mag-logout</logout>
+<language>Change Language</language>
+<logout>Logout</logout>
 </label>
 </UIUserPlatformToolBarPortlet>
 </bundle>

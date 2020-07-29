@@ -6,14 +6,14 @@
          <poll>Poll</poll>
          <event>Ang Kaganapan</event>
          <upload>Ang File</upload>
-         <wiki>Ang Pahina ng Wiki</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
    <UICreateList>
       <label>
          <topic>ang talakayan</topic>
-         <poll>Ang Poll</poll>
+         <poll>Poll</poll>
          <CreateANew>Ang Bagong {1}:</CreateANew>
          <NoForum>Paumanhin, walang forum na magagamit pa kung saan maaari kang lumikaha ng {1}. Magsimula sa paglikha ng espasyo muna at pagkatapos ay subukan muli.</NoForum>
          <RequireSelectForum>Please select a forum.</RequireSelectForum>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>Isang Bagong Pahina ng Wiki:</title>
+         <title>New Note:</title>
          <location>Ang Lokasyon</location>
       </label>
    </UICreateWiki>
@@ -53,8 +53,8 @@
          <EndEvent>Para sa</EndEvent>
          <StartEvent>Mula sa</StartEvent>
          <Calendar>Ang Kalendaryo</Calendar>
-         <all-day>All Day</all-day>
-         <defaultCalendarId>Default</defaultCalendarId>
+         <all-day>Buong araw</all-day>
+         <defaultCalendarId>Naka-default</defaultCalendarId>
       </label>
       <msg>
          <summary-field-required>The field "Title" is required.</summary-field-required>

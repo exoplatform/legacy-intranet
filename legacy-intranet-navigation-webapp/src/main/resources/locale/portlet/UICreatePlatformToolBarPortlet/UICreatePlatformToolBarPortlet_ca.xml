@@ -6,7 +6,7 @@
          <poll>Enquesta</poll>
          <event>Esdeveniment</event>
          <upload>Fitxer</upload>
-         <wiki>Pàgina Wiki</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>Crea una nova pàgina Wiki:</title>
+         <title>New Note:</title>
          <location>Ubicació</location>
       </label>
    </UICreateWiki>

@@ -4,9 +4,9 @@
 <label>
 <NotificationSettingsPortlet>Mijn Notificaties</NotificationSettingsPortlet>
 <activities>Mijn activiteiten</activities>
-<profile>Mijn Profiel</profile>
-<network>Mijn connecties</network>
-<wiki>Mijn Wiki</wiki>
+<profile>Mijn profiel</profile>
+<network>Mijn verbindingen</network>
+<wiki>My Notes</wiki>
 <wallet>My Wallet</wallet>
 <achievements>My Achievements</achievements>
 <account>Rekening</account>

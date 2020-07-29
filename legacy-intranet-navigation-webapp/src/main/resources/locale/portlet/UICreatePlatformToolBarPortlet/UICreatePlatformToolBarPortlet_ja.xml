@@ -6,7 +6,7 @@
          <poll>アンケート</poll>
          <event>イベント</event>
          <upload>ファイル</upload>
-         <wiki>Wiki ページ</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>新しい Wiki ページを作成</title>
+         <title>New Note:</title>
          <location>場所</location>
       </label>
    </UICreateWiki>

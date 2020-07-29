@@ -6,7 +6,7 @@
          <poll>投票</poll>
          <event>事件</event>
          <upload>上传文件</upload>
-         <wiki>wiki页面</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
@@ -36,12 +36,12 @@
          <SelectAForum>选择一个论坛</SelectAForum>
          <location>中的位置</location>
          <forumId>和论坛</forumId>
-         <FilterForums>筛选论坛</FilterForums>
+         <FilterForums>筛选器论坛</FilterForums>
       </label>
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>创建一个新的 Wiki 页面：</title>
+         <title>New Note:</title>
          <location>中的位置</location>
       </label>
    </UICreateWiki>
