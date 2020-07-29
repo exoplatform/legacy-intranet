@@ -3,14 +3,14 @@
 <UIUserPlatformToolBarPortlet>
 <label>
 <NotificationSettingsPortlet>Mine varsler</NotificationSettingsPortlet>
-<activities>My Activities</activities>
+<activities>Mine aktiviteter</activities>
 <profile>Min profil</profile>
 <network>Mitt nettverk</network>
-<wiki>Min Wiki</wiki>
+<wiki>My Notes</wiki>
 <wallet>My Wallet</wallet>
 <achievements>My Achievements</achievements>
 <account>Account</account>
-<language>Bytt språk</language>
+<language>Endre språk</language>
 <logout>Logg ut</logout>
 </label>
 </UIUserPlatformToolBarPortlet>

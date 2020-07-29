@@ -3,10 +3,10 @@
 <UIUserPlatformToolBarPortlet>
 <label>
 <NotificationSettingsPortlet>Moje powiadomienia</NotificationSettingsPortlet>
-<activities>Moje działania</activities>
+<activities>Moje aktywności</activities>
 <profile>Mój profil</profile>
 <network>Moje połączenia</network>
-<wiki>Mój Wiki</wiki>
+<wiki>My Notes</wiki>
 <wallet>My Wallet</wallet>
 <achievements>My Achievements</achievements>
 <account>Konto</account>

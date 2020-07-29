@@ -4,9 +4,9 @@
       <label>
          <topic>Ang Panaghisgutan</topic>
          <poll>Ang Poll</poll>
-         <event>Ang Panghitabo</event>
+         <event>Panghitabo</event>
          <upload>Ang file</upload>
-         <wiki>Ang Wiki na page</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
@@ -35,13 +35,13 @@
       <label>
          <SelectAForum>Pili og Panagstoryaay</SelectAForum>
          <location>Naa sa Lokasyon</location>
-         <forumId>Og ang Panagstoryaay</forumId>
+         <forumId>Og Panagstoryaay</forumId>
          <FilterForums>Salaon ang mga Panagstoryaay</FilterForums>
       </label>
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>Bag-ong Wiki na Page:</title>
+         <title>New Note:</title>
          <location>Location</location>
       </label>
    </UICreateWiki>
@@ -53,8 +53,8 @@
          <EndEvent>Para sa</EndEvent>
          <StartEvent>Gikan ni</StartEvent>
          <Calendar>Ang Kalendaryo</Calendar>
-         <all-day>Tibuok Adlaw</all-day>
-         <defaultCalendarId>Daan na nga ing-ana</defaultCalendarId>
+         <all-day>All Day</all-day>
+         <defaultCalendarId>Default</defaultCalendarId>
       </label>
       <msg>
          <summary-field-required>Ang field na "Titulo" kay kinahanglan.</summary-field-required>

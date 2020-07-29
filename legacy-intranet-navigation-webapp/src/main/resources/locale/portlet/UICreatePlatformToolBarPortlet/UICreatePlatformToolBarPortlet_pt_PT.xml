@@ -4,16 +4,16 @@
       <label>
          <topic>Criar Tópico</topic>
          <poll>Criar Sondagem</poll>
-         <event>Criar Evento</event>
+         <event>Evento</event>
          <upload>Carregar um ficheiro</upload>
-         <wiki>Criar Página Wiki</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
    <UICreateList>
       <label>
          <topic>Tópico</topic>
-         <poll>Sondagem</poll>
+         <poll>Criar Sondagem</poll>
          <CreateANew>Criar {1}:</CreateANew>
          <NoForum>Nenhum fórum está disponível ainda para criar uma {1}. Comece por criar o seu próprio espaço.</NoForum>
          <RequireSelectForum>Por favor, selecione um fórum.</RequireSelectForum>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>Criar uma nova página Wiki:</title>
+         <title>New Note:</title>
          <location>Em</location>
       </label>
    </UICreateWiki>

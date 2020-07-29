@@ -6,7 +6,7 @@
          <poll>Encuesta</poll>
          <event>Evento</event>
          <upload>Archivo</upload>
-         <wiki>Página Wiki</wiki>
+         <wiki>Nota</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>Crear una página Wiki:</title>
+         <title>Nueva nota:</title>
          <location>Ubicación</location>
       </label>
    </UICreateWiki>

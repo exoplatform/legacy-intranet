@@ -4,11 +4,11 @@
 <label>
 <NotificationSettingsPortlet>Mis Notificaciones</NotificationSettingsPortlet>
 <activities>Mis Actividades</activities>
-<profile>Mi Perfil</profile>
-<network>Mis Conexiones</network>
-<wiki>Mi Wiki</wiki>
+<profile>Mi perfil</profile>
+<network>Mis conexiones</network>
+<wiki>Mis notas</wiki>
 <wallet>Mi cartera</wallet>
-<achievements>My Achievements</achievements>
+<achievements>Mis logros</achievements>
 <account>Cuenta</account>
 <language>Cambiar Idioma</language>
 <logout>Desconectarse</logout>

@@ -6,7 +6,7 @@
          <poll>Опрос</poll>
          <event>Событие</event>
          <upload>Файл</upload>
-         <wiki>Вики-страница</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>Новая Вики-страница:</title>
+         <title>New Note:</title>
          <location>Расположение</location>
       </label>
    </UICreateWiki>

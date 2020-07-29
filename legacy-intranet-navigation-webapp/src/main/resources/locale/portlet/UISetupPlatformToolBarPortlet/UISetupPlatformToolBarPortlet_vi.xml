@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bundle>
-<UISetupPlatformToolBarPortlet>
-<label>
-<applications>Ứng dụng</applications>
-<content>Nội dung</content>
-<siteExplorer>Site Explorer</siteExplorer>
-<wcmAdmin>Quản trị Nội dung</wcmAdmin>
-<users>Users</users>
-<newStaff>Thêm Người dùng</newStaff>
-<org-management>Manage Users</org-management>
-<portal>Cổng thông tin</portal>
-<administration>Administration</administration>
-<system>Hệ thống</system>
-<groupnavigation>Site của Nhóm</groupnavigation>
-<pageManagement>Trang</pageManagement>
-<portalnavigation>Site</portalnavigation>
-<spaces>Nhóm</spaces>
-<Branding>Thương hiệu</Branding>
+  <UISetupPlatformToolBarPortlet>
+    <label>
+      <applications>Ứng dụng</applications>
+      <content>Nội dung</content>
+      <siteExplorer>Site Explorer</siteExplorer>
+      <wcmAdmin>Kho dữ liệu</wcmAdmin>
+      <users>Người dùng</users>
+      <newStaff>Thêm Người dùng</newStaff>
+      <org-management>Manage Community</org-management>
+      <portal>Cổng thông tin</portal>
+      <administration>Administration</administration>
+      <system>Hệ thống</system>
+      <groupnavigation>Site của Nhóm</groupnavigation>
+      <pageManagement>Trang</pageManagement>
+      <portalnavigation>Site</portalnavigation>
+      <spaces>Nhóm</spaces>
+      <spacesTemplates>Manage templates</spacesTemplates>
+      <spacesAdministration>Manage spaces</spacesAdministration>
+      <Branding>Thương hiệu</Branding>
       <Notification>Thông báo</Notification>
-<ide>IDE</ide>
-<search>Search Administration</search>
-</label>
-</UISetupPlatformToolBarPortlet>
+      <search>Search Administration</search>
+      <searchIndexing>Search indexing</searchIndexing>
+    </label>
+  </UISetupPlatformToolBarPortlet>
 </bundle>

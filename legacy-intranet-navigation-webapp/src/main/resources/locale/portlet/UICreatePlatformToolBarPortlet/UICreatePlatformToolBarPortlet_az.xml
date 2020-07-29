@@ -4,9 +4,9 @@
       <label>
          <topic>Müzakirə</topic>
          <poll>Anket</poll>
-         <event>Hadisə</event>
+         <event>Event</event>
          <upload>Fayl</upload>
-         <wiki>Wiki Səhifəsi</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>New Wiki Page:</title>
+         <title>New Note:</title>
          <location>Location</location>
       </label>
    </UICreateWiki>

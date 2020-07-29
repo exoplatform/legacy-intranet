@@ -6,14 +6,14 @@
          <poll>Ankieta</poll>
          <event>Wydarzenie</event>
          <upload>Prześlij plik</upload>
-         <wiki>Strona Wiki</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
    <UICreateList>
       <label>
          <topic>temat</topic>
-         <poll>ankieta</poll>
+         <poll>Ankieta</poll>
          <CreateANew>Utwórz nowy {1}:</CreateANew>
          <NoForum>Niestety, żadne forum nie jest jeszcze dostępne, aby stworzyć {1}. Zacznij od stworzenia własnej przestrzeni.</NoForum>
          <RequireSelectForum>Wybierz forum.</RequireSelectForum>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>Utwórz nową stronę Wiki:</title>
+         <title>New Note:</title>
          <location>Lokalizacja</location>
       </label>
    </UICreateWiki>

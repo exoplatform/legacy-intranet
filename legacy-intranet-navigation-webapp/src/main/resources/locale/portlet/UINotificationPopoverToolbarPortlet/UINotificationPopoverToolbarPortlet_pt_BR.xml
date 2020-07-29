@@ -5,8 +5,8 @@
 <MarkAllAsRead>Marcar todas como lida</MarkAllAsRead>
 <NoNotifications>Sem notificações</NoNotifications>
 <InlineImage>Imagem embutida</InlineImage>
-<ViewAll>Visualizar Todos</ViewAll>
-<Loading>carregando</Loading>
+<ViewAll>Visualizar todos</ViewAll>
+<Loading>Carregando</Loading>
 </label>
 </UINotificationPopoverToolbarPortlet>
 </bundle>

@@ -2,11 +2,11 @@
 <bundle>
 <UIUserPlatformToolBarPortlet>
 <label>
-<NotificationSettingsPortlet>Pemberitahuan Saya</NotificationSettingsPortlet>
-<activities>Aktifitas Saya</activities>
+<NotificationSettingsPortlet>Notifikasi saya</NotificationSettingsPortlet>
+<activities>Aktivitas saya</activities>
 <profile>Profil Saya</profile>
-<network>Koneksi Saya</network>
-<wiki>Wiki Saya</wiki>
+<network>Koneksi saya</network>
+<wiki>My Notes</wiki>
 <wallet>My Wallet</wallet>
 <achievements>My Achievements</achievements>
 <account>Akun</account>

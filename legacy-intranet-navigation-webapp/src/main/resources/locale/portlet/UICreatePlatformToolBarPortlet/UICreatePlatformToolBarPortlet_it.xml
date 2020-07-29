@@ -6,14 +6,14 @@
          <poll>Sondaggio</poll>
          <event>Evento</event>
          <upload>Caricare un File</upload>
-         <wiki>Pagina Wiki</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
    <UICreateList>
       <label>
          <topic>discussione</topic>
-         <poll>sondaggio</poll>
+         <poll>Sondaggio</poll>
          <CreateANew>Creare un nuovo {1}:</CreateANew>
          <NoForum>Siamo spiacenti, nessun forum è disponibile ancora per creare un {1}. Iniziare creando il suo proprio spazio.</NoForum>
          <RequireSelectForum>Prego scegliere il forum.</RequireSelectForum>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>Creare un nuova Pagina Wiki:</title>
+         <title>New Note:</title>
          <location>Dentro di</location>
       </label>
    </UICreateWiki>
