@@ -5,11 +5,11 @@
     <artifactId>addons-parent-pom</artifactId>
     <groupId>org.exoplatform.addons</groupId>
     <version>12-RC01</version>
-    <relativePath/>
+    <relativePath />
   </parent>
   <groupId>org.exoplatform.addons.legacy-intranet</groupId>
   <artifactId>legacy-intranet</artifactId>
-  <version>6.1.x-SNAPSHOT</version>
+  <version>6.1.0-21082020</version>
   <packaging>pom</packaging>
   <name>eXo Addons:: Legacy intranet</name>
   <description>Parent POM for Legacy intranet addon.</description>
@@ -25,7 +25,7 @@
     <connection>scm:git:git://github.com/exo-addons/legacy-intranet.git</connection>
     <developerConnection>scm:git:git@github.com:exo-addons/legacy-intranet.git</developerConnection>
     <url>https://github.com/exoplatform/legacy-intranet</url>
-    <tag>HEAD</tag>
+    <tag>6.1.0-21082020</tag>
   </scm>
   <properties>
     <!-- **************************************** -->
