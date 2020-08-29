@@ -6,7 +6,7 @@
          <poll>Sondaggio</poll>
          <event>Evento</event>
          <upload>Caricare un File</upload>
-         <wiki>Note</wiki>
+         <wiki>Nota</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>New Note:</title>
+         <title>Nuova Nota:</title>
          <location>Dentro di</location>
       </label>
    </UICreateWiki>
