@@ -6,7 +6,7 @@
          <poll>Опитування</poll>
          <event>Подія</event>
          <upload>Файл</upload>
-         <wiki>Note</wiki>
+         <wiki>Примітка</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>New Note:</title>
+         <title>Нова Примітка:</title>
          <location>Місцезнаходження</location>
       </label>
    </UICreateWiki>
