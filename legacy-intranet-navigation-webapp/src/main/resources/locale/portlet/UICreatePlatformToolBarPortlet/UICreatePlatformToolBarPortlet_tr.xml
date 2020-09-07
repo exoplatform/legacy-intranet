@@ -6,7 +6,7 @@
          <poll>Anket</poll>
          <event>Etkinlik</event>
          <upload>Dosya</upload>
-         <wiki>Note</wiki>
+         <wiki>Not</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>New Note:</title>
+         <title>Yeni Not:</title>
          <location>Yer</location>
       </label>
    </UICreateWiki>
