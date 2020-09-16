@@ -2,13 +2,13 @@
 <bundle>
 <UIUserPlatformToolBarPortlet>
 <label>
-<NotificationSettingsPortlet>Notificări</NotificationSettingsPortlet>
+<NotificationSettingsPortlet>Notificările mele</NotificationSettingsPortlet>
 <activities>Activităţile mele</activities>
 <profile>Profilul meu</profile>
 <network>Colaboratorii mei</network>
-<wiki>My Notes</wiki>
-<wallet>My Wallet</wallet>
-<achievements>My Achievements</achievements>
+<wiki>Notele mele</wiki>
+<wallet>Portofelul meu</wallet>
+<achievements>Realizările mele</achievements>
 <account>Cont</account>
 <language>Schimbă limba</language>
 <logout>Deconectare</logout>
