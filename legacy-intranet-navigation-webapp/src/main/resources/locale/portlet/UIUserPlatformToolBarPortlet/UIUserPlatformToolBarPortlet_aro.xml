@@ -2,16 +2,16 @@
 <bundle>
 <UIUserPlatformToolBarPortlet>
 <label>
-<NotificationSettingsPortlet>الإشعارات الخاصّة بي</NotificationSettingsPortlet>
-<activities>أنشطتي</activities>
-<profile>ملفي الشخصي</profile>
-<network>علاقاتي</network>
-<wiki>مذكراتي</wiki>
-<wallet>محفظتي</wallet>
-<achievements>انجازاتي</achievements>
-<account>الحساب</account>
-<language>تغيير اللغة</language>
-<logout>خروج</logout>
+<NotificationSettingsPortlet>My Notifications</NotificationSettingsPortlet>
+<activities>My Activities</activities>
+<profile>My Profile</profile>
+<network>My Connections</network>
+<wiki>My Notes</wiki>
+<wallet>My Wallet</wallet>
+<achievements>My Achievements</achievements>
+<account>Account</account>
+<language>Change Language</language>
+<logout>Logout</logout>
 </label>
 </UIUserPlatformToolBarPortlet>
 </bundle>
