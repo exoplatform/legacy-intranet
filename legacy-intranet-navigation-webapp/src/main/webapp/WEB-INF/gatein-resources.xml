@@ -116,22 +116,6 @@
     </depends>
   </module>
   <module>
-    <name>jquery-touch</name>
-    <as>jqueryTouch</as>
-    <script>
-      <adapter>
-        (function($) {
-        var _$ = window.jQuery; window.jQuery = $;
-        <include>/javascript/eXo/platform/toe.min.js</include>
-        window.jQuery = _$;
-        })($);
-      </adapter>
-    </script>
-    <depends>
-      <module>jquery</module>
-    </depends>
-  </module>
-  <module>
     <name>navigation-toolbar</name>
     <as>navigationToolbar</as>
     <script>
