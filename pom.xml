@@ -40,13 +40,13 @@
     <!-- Project Dependencies -->
     <!-- **************************************** -->
     <!-- legacy Intranet Project Dependencies -->
-    <org.exoplatform.social.version>6.0.x-SNAPSHOT</org.exoplatform.social.version>
-    <addon.exo.ecms.version>6.0.x-SNAPSHOT</addon.exo.ecms.version>
-    <addon.exo.forum.version>6.0.x-SNAPSHOT</addon.exo.forum.version>
-    <addon.exo.wiki.version>6.0.x-SNAPSHOT</addon.exo.wiki.version>
-    <addon.exo.calendar.version>6.0.x-SNAPSHOT</addon.exo.calendar.version>
-    <addon.exo.jcr.version>6.0.x-SNAPSHOT</addon.exo.jcr.version>
-    <org.exoplatform.platform-ui.version>6.0.x-SNAPSHOT</org.exoplatform.platform-ui.version>
+    <org.exoplatform.social.version>6.0.3</org.exoplatform.social.version>
+    <addon.exo.ecms.version>6.0.3</addon.exo.ecms.version>
+    <addon.exo.forum.version>6.0.3</addon.exo.forum.version>
+    <addon.exo.wiki.version>6.0.3</addon.exo.wiki.version>
+    <addon.exo.calendar.version>6.0.3</addon.exo.calendar.version>
+    <addon.exo.jcr.version>6.0.3</addon.exo.jcr.version>
+    <org.exoplatform.platform-ui.version>6.0.3</org.exoplatform.platform-ui.version>
   </properties>
   <dependencyManagement>
     <dependencies>
