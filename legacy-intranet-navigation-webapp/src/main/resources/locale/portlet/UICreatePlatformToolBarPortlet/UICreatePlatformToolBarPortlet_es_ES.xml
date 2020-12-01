@@ -58,8 +58,8 @@
       </label>
       <msg>
          <summary-field-required>Se requiere el campo "Título".</summary-field-required>
-         <fromDate-format>El formato de fecha "Desde" es incorrecto.</fromDate-format>
-         <toDate-format>El formato de fecha "Hasta" es incorrecto.</toDate-format>
+         <fromDate-format>El formato de fecha «Desde» es incorrecto.</fromDate-format>
+         <toDate-format>El formato de fecha «A» es incorrecto.</toDate-format>
          <logic-required>Lo sentimos, no puede crear un evento que termina antes de que empiece.</logic-required>
          <cant-add-event-on-remote-calendar>No puede añadir eventos al calendario remoto</cant-add-event-on-remote-calendar>
          <add-successfully>
