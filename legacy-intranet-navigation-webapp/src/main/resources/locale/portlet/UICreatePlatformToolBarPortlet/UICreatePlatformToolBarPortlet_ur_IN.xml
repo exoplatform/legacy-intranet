@@ -4,9 +4,9 @@
       <label>
          <topic>مباحثہ</topic>
          <poll>رائے شماری</poll>
-         <event>Event</event>
+         <event>تقریب</event>
          <upload>مسل</upload>
-         <wiki>وکی صفحہ</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>نیا ویکی صفحہ:</title>
+         <title>New Note:</title>
          <location>مقام</location>
       </label>
    </UICreateWiki>

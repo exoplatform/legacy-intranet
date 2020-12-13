@@ -6,14 +6,14 @@
          <poll>Sondage</poll>
          <event>Événement</event>
          <upload>Fichier</upload>
-         <wiki>Wiki</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
    <UICreateList>
       <label>
          <topic>Discussion</topic>
-         <poll>un Sondage</poll>
+         <poll>Sondage</poll>
          <CreateANew>Créer {1}:</CreateANew>
          <NoForum>Désolé, aucun forum n'est disponible pour l'instant pour créer {1}. Essayez de créer un espace puis reessayez.</NoForum>
          <RequireSelectForum>Veuillez sélectionner un forum.</RequireSelectForum>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>Créer une Page Wiki:</title>
+         <title>Nouvelle Note:</title>
          <location>Lieu</location>
       </label>
    </UICreateWiki>
@@ -54,7 +54,7 @@
          <StartEvent>de</StartEvent>
          <Calendar>Calendrier</Calendar>
          <all-day>Toute la journée</all-day>
-         <defaultCalendarId>Mon Calendrier</defaultCalendarId>
+         <defaultCalendarId>Défaut</defaultCalendarId>
       </label>
       <msg>
          <summary-field-required>Le champ "Titre" est obligatoire.</summary-field-required>

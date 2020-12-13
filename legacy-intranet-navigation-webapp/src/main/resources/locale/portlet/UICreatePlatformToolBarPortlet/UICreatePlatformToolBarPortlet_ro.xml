@@ -6,7 +6,7 @@
          <poll>Sondaj</poll>
          <event>Eveniment</event>
          <upload>Fișier</upload>
-         <wiki>Pagina wiki</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>Creați o nouă Pagină Wiki:</title>
+         <title>New Note:</title>
          <location>Locaţie</location>
       </label>
    </UICreateWiki>

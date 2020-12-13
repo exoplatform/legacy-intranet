@@ -2,11 +2,11 @@
 <bundle>
 <UIUserPlatformToolBarPortlet>
 <label>
-<NotificationSettingsPortlet>E-mailová upozornění</NotificationSettingsPortlet>
+<NotificationSettingsPortlet>Moje upozornění</NotificationSettingsPortlet>
 <activities>Moje příspěvky</activities>
 <profile>Můj profil</profile>
 <network>Moje kontakty</network>
-<wiki>Moje Wiki</wiki>
+<wiki>My Notes</wiki>
 <wallet>My Wallet</wallet>
 <achievements>My Achievements</achievements>
 <account>Účet</account>

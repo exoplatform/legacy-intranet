@@ -2,14 +2,14 @@
 <bundle>
 <UIUserPlatformToolBarPortlet>
 <label>
-<NotificationSettingsPortlet>Aking mga notipikasyon</NotificationSettingsPortlet>
-<activities>Aking mga Aktibidad</activities>
-<profile>Aking profile</profile>
-<network>Aking mga Koneksyon</network>
-<wiki>Ang Wiki ko</wiki>
+<NotificationSettingsPortlet>My Notifications</NotificationSettingsPortlet>
+<activities>Ang aking mga Aktibidad</activities>
+<profile>Ang Aking profile</profile>
+<network>Ang Aking mga Koneksyon</network>
+<wiki>My Notes</wiki>
 <wallet>My Wallet</wallet>
 <achievements>My Achievements</achievements>
-<account>Account</account>
+<account>Ang Account</account>
 <language>Magpalit ng Lengguwahe</language>
 <logout>Mag-logout</logout>
 </label>

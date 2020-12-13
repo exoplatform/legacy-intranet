@@ -5,13 +5,13 @@
 <NotificationSettingsPortlet>الإشعارات الخاصّة بي</NotificationSettingsPortlet>
 <activities>أنشطتي</activities>
 <profile>ملفي الشخصي</profile>
-<network>جهات الاتصال</network>
-<wiki>ويكي خاصة</wiki>
+<network>علاقاتي</network>
+<wiki>مذكراتي</wiki>
 <wallet>محفظتي</wallet>
 <achievements>انجازاتي</achievements>
 <account>الحساب</account>
 <language>تغيير اللغة</language>
-<logout>تسجيل الخروج</logout>
+<logout>خروج</logout>
 </label>
 </UIUserPlatformToolBarPortlet>
 </bundle>

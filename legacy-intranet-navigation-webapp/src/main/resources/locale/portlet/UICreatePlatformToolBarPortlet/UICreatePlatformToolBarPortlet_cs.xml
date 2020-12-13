@@ -6,14 +6,14 @@
          <poll>Anketa</poll>
          <event>Událost</event>
          <upload>Nahrát soubor</upload>
-         <wiki>Wiki Stránka</wiki>
+         <wiki>Note</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
    <UICreateList>
       <label>
          <topic>tématu</topic>
-         <poll>ankety</poll>
+         <poll>Anketa</poll>
          <CreateANew>Vytvořit nový {1}:</CreateANew>
          <NoForum>Omlouváme se, ale zatím není k dispozici žádné fórum. K vytvoření {1} je fórum nutné. Začněte vytvořením vlastní skupiny.</NoForum>
          <RequireSelectForum>Vyberte prosím fórum.</RequireSelectForum>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>Vytvořit novou Wiki stránku:</title>
+         <title>New Note:</title>
          <location>V umístění</location>
       </label>
    </UICreateWiki>

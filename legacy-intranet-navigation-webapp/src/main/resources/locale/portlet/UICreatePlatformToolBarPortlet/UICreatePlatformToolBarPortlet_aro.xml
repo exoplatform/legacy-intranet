@@ -6,7 +6,7 @@
          <poll>استطلاع رأي</poll>
          <event>حدث</event>
          <upload>الملف</upload>
-         <wiki>صفحة ويكي</wiki>
+         <wiki>مذكرة</wiki>
 
       </label>
    </UIUserPlatformToolBarCreatePortlet>
@@ -41,7 +41,7 @@
    </UICreatePoll>
    <UICreateWiki>
       <label>
-         <title>إنشاء صفحة ويكي جديدة:</title>
+         <title>مذكرة جديدة</title>
          <location>المكان</location>
       </label>
    </UICreateWiki>

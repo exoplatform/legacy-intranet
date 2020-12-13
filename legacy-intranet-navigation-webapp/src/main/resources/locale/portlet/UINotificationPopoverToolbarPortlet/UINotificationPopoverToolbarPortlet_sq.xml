@@ -2,11 +2,11 @@
 <bundle>
 <UINotificationPopoverToolbarPortlet>
 <label>
-<MarkAllAsRead>crwdns6812534:0crwdne6812534:0</MarkAllAsRead>
-<NoNotifications>crwdns6812535:0crwdne6812535:0</NoNotifications>
-<InlineImage>crwdns6858612:0crwdne6858612:0</InlineImage>
-<ViewAll>crwdns6812536:0crwdne6812536:0</ViewAll>
-<Loading>crwdns6812537:0crwdne6812537:0</Loading>
+<MarkAllAsRead>crwdns6940842:0crwdne6940842:0</MarkAllAsRead>
+<NoNotifications>crwdns6940844:0crwdne6940844:0</NoNotifications>
+<InlineImage>crwdns6940846:0crwdne6940846:0</InlineImage>
+<ViewAll>crwdns6940848:0crwdne6940848:0</ViewAll>
+<Loading>crwdns6940850:0crwdne6940850:0</Loading>
 </label>
 </UINotificationPopoverToolbarPortlet>
 </bundle>

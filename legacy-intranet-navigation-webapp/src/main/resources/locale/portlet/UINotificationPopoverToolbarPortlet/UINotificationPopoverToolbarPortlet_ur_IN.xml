@@ -5,8 +5,8 @@
 <MarkAllAsRead>سب کو پڑھا ہوا شمار ذد کریں</MarkAllAsRead>
 <NoNotifications>کوئی اطلاعات نہیں</NoNotifications>
 <InlineImage>ترتیب وار تصویر</InlineImage>
-<ViewAll>سبھی دیکھیں</ViewAll>
-<Loading>لوڈ کر رہا ہے</Loading>
+<ViewAll>View All</ViewAll>
+<Loading>Loading</Loading>
 </label>
 </UINotificationPopoverToolbarPortlet>
 </bundle>
