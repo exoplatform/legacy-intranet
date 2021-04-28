@@ -9,8 +9,9 @@ import java.util.regex.Pattern;
 import javax.portlet.*;
 
 import com.google.common.base.Strings;
-import com.sun.syndication.feed.synd.*;
-import com.sun.syndication.io.*;
+import com.rometools.rome.feed.synd.*;
+import com.rometools.rome.io.*;
+
 
 import org.exoplatform.platform.portlet.rss.model.FeedItem;
 import org.exoplatform.services.log.ExoLogger;
