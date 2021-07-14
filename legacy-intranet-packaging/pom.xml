@@ -12,34 +12,7 @@
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>legacy-intranet-extension-service</artifactId>
-      <version>${project.version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>legacy-intranet-extension-portlets</artifactId>
-      <version>${project.version}</version>
-      <type>war</type>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
       <artifactId>legacy-intranet-extension-webapp</artifactId>
-      <version>${project.version}</version>
-      <type>war</type>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>legacy-intranet-homepage-webapp</artifactId>
-      <version>${project.version}</version>
-      <type>war</type>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>legacy-intranet-navigation-webapp</artifactId>
       <version>${project.version}</version>
       <type>war</type>
       <scope>provided</scope>
