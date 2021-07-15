@@ -45,7 +45,7 @@
         <value-param>
           <name>override</name>
           <description>The flag parameter to decide if portal metadata is overriden on restarting server</description>
-          <value>${exo.intranet.portalConfig.metadata.override:false}</value>
+          <value>${exo.intranet.portalConfig.metadata.override:true}</value>
         </value-param>
 				<object-param>
 					<name>portal.configuration</name>
@@ -65,27 +65,11 @@
 							<string>war:/conf/office-extension/portal</string>
 						</field>
 						<field name="importMode">
-							<string>${exo.intranet.portalConfig.metadata.importmode:insert}</string>
+							<string>${exo.intranet.portalConfig.metadata.importmode:merge}</string>
 						</field>
 					</object>
 				</object-param>
 			</init-params>
 		</component-plugin>
 	</external-component-plugins>
-
-  <external-component-plugins>
-    <target-component>org.exoplatform.groovyscript.text.TemplateService</target-component>
-    <component-plugin>
-      <name>UIPortalApplication-head</name>
-      <set-method>addTemplateExtension</set-method>
-      <type>org.exoplatform.groovyscript.text.TemplateExtensionPlugin</type>
-      <init-params>
-        <values-param>
-          <name>templates</name>
-          <description>The list of templates to include in HTML Page Header with UIPortalApplication.gtmpl</description>
-          <value>war:/groovy/portal/webui/workspace/UILegacyIntranetPortalApplicationHead.gtmpl</value>
-        </values-param>
-      </init-params>
-    </component-plugin>
-  </external-component-plugins>
 </configuration>

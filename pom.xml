@@ -4,7 +4,7 @@
   <parent>
     <artifactId>addons-parent-pom</artifactId>
     <groupId>org.exoplatform.addons</groupId>
-    <version>13</version>
+    <version>12</version>
     <relativePath/>
   </parent>
   <groupId>org.exoplatform.addons.legacy-intranet</groupId>
@@ -14,11 +14,7 @@
   <name>eXo Addons:: Legacy intranet</name>
   <description>Parent POM for Legacy intranet addon.</description>
   <modules>
-    <module>legacy-intranet-extension-service</module>
     <module>legacy-intranet-extension-webapp</module>
-    <module>legacy-intranet-extension-portlets</module>
-    <module>legacy-intranet-homepage-webapp</module>
-    <module>legacy-intranet-navigation-webapp</module>
     <module>legacy-intranet-packaging</module>
   </modules>
   <scm>
@@ -40,86 +36,13 @@
     <!-- Project Dependencies -->
     <!-- **************************************** -->
     <!-- legacy Intranet Project Dependencies -->
-    <org.exoplatform.social.version>6.1.x-SNAPSHOT</org.exoplatform.social.version>
-    <addon.exo.ecms.version>6.1.x-SNAPSHOT</addon.exo.ecms.version>
-    <addon.exo.forum.version>6.1.x-SNAPSHOT</addon.exo.forum.version>
-    <addon.exo.wiki.version>6.1.x-SNAPSHOT</addon.exo.wiki.version>
-    <addon.exo.calendar.version>6.1.x-SNAPSHOT</addon.exo.calendar.version>
-    <addon.exo.jcr.version>6.1.x-SNAPSHOT</addon.exo.jcr.version>
-    <org.exoplatform.platform-ui.version>6.1.x-SNAPSHOT</org.exoplatform.platform-ui.version>
   </properties>
   <dependencyManagement>
     <dependencies>
-      <!-- Import versions of external dependencies to use -->
-      <dependency>
-        <groupId>org.exoplatform.social</groupId>
-        <artifactId>social</artifactId>
-        <version>${org.exoplatform.social.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.exoplatform.ecms</groupId>
-        <artifactId>ecms</artifactId>
-        <version>${addon.exo.ecms.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.exoplatform.forum</groupId>
-        <artifactId>forum</artifactId>
-        <version>${addon.exo.forum.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.exoplatform.calendar</groupId>
-        <artifactId>calendar</artifactId>
-        <version>${addon.exo.calendar.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.exoplatform.wiki</groupId>
-        <artifactId>wiki</artifactId>
-        <version>${addon.exo.wiki.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.exoplatform.platform-ui</groupId>
-        <artifactId>platform-ui</artifactId>
-        <version>${org.exoplatform.platform-ui.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
       <!-- Current project artifacts -->
       <dependency>
         <groupId>${project.groupId}</groupId>
-        <artifactId>legacy-intranet-extension-service</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>legacy-intranet-extension-portlets</artifactId>
-        <version>${project.version}</version>
-        <type>war</type>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
         <artifactId>legacy-intranet-extension-webapp</artifactId>
-        <version>${project.version}</version>
-        <type>war</type>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>legacy-intranet-homepage-webapp</artifactId>
-        <version>${project.version}</version>
-        <type>war</type>
-      </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>legacy-intranet-navigation-webapp</artifactId>
         <version>${project.version}</version>
         <type>war</type>
       </dependency>
@@ -137,18 +60,4 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-  <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-war-plugin</artifactId>
-          <configuration>
-            <!-- Don't include libraries into Web Archives -->
-            <packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
 </project>

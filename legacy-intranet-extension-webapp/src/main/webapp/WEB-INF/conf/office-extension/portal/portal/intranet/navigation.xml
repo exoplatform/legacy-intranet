@@ -24,12 +24,10 @@
   <priority>1</priority>
 
   <page-nodes>
-
     <node>
       <name>home</name>
       <label>#{portal.intranet.home}</label>
-      <page-reference>portal::intranet::homepage</page-reference>
+      <page-reference>portal::dw::homepage</page-reference>
     </node>
-
   </page-nodes>
 </node-navigation>
